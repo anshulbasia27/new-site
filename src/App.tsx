@@ -1133,13 +1133,13 @@ function ContactForm() {
     const form = e.currentTarget
     const data = new FormData(form)
 
-    fetch('https://formspree.io/f/placeholder', {
+    fetch('https://formspree.io/f/mdawozwv', {
       method: 'POST',
       body: data,
       headers: { Accept: 'application/json' },
     })
       .then(() => setSubmitted(true))
-      .catch(() => setSubmitted(true))
+      .catch(() => alert('Something went wrong. Please email anshul@altorlab.com directly.'))
   }
 
   return (
