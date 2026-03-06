@@ -111,7 +111,7 @@ function Hero() {
             transition={{ duration: 0.7, ease, delay: 0.2 }}
             className="text-balance text-4xl md:text-[3.5rem] md:leading-[1.08] font-bold tracking-[-0.03em] text-text-primary mb-6"
           >
-            Your Shopify store has
+            Your online store has
             <br />
             <span className="text-danger">
               accessibility violations.
@@ -288,7 +288,7 @@ function Hero() {
 const lawsuitHeadlines = [
   'Blue Apron sued for website accessibility violations',
   'D2C skincare brand settles ADA lawsuit for $85,000',
-  'Shopify merchant receives demand letter for missing alt text',
+  'Ecommerce merchant receives demand letter for missing alt text',
   'Fashion retailer named in drive-by ADA complaint — IL court',
   'Supplement brand pays $52K settlement over WCAG failures',
   'Pet food D2C site sued — keyboard navigation issues cited',
@@ -390,8 +390,8 @@ function WhyD2C() {
         {[
           {
             icon: <ShoppingCart className="w-5 h-5" />,
-            title: 'Your Shopify theme isn\'t compliant',
-            desc: 'Most popular themes fail WCAG out of the box. Third-party apps (reviews, popups, chat widgets) add more violations. Every product page is a liability.',
+            title: 'Your store theme isn\'t compliant',
+            desc: 'Most ecommerce themes — Shopify, WooCommerce, BigCommerce — fail WCAG out of the box. Third-party apps (reviews, popups, chat widgets) add more violations. Every product page is a liability.',
           },
           {
             icon: <Scale className="w-5 h-5" />,
