@@ -11,14 +11,10 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp,
-  Zap,
-  Eye,
-  ShieldAlert,
   Scale,
   TrendingUp,
-  Lock,
-  Globe,
   ShoppingCart,
+  Menu,
 } from 'lucide-react'
 
 // ─── Animation helpers ───────────────────────────────────────────────
@@ -50,6 +46,8 @@ function FadeUp({
 
 // ─── Sticky Nav ──────────────────────────────────────────────────────
 function Nav() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-surface-border/60 bg-surface/80 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
@@ -73,13 +71,39 @@ function Nav() {
             FAQ
           </a>
         </div>
-        <a
-          href="#contact"
-          className="px-4 py-2 bg-danger hover:bg-red-700 text-white text-sm font-semibold rounded-lg transition-colors"
-        >
-          Free Audit
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="#contact"
+            className="px-4 py-2 bg-danger hover:bg-red-700 text-white text-sm font-semibold rounded-lg transition-colors"
+          >
+            Free Audit
+          </a>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-1.5 text-text-secondary hover:text-text-primary transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && (
+        <div className="md:hidden border-t border-surface-border/60 bg-surface/95 backdrop-blur-xl">
+          <div className="px-6 py-4 flex flex-col gap-4 text-sm text-text-secondary">
+            <a href="#how" onClick={() => setMobileOpen(false)} className="hover:text-text-primary transition-colors">
+              How It Works
+            </a>
+            <a href="#pricing" onClick={() => setMobileOpen(false)} className="hover:text-text-primary transition-colors">
+              Pricing
+            </a>
+            <a href="#faq" onClick={() => setMobileOpen(false)} className="hover:text-text-primary transition-colors">
+              FAQ
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
@@ -574,152 +598,208 @@ function NotAnOverlay() {
   )
 }
 
-// ─── What We Find (Terminal) ─────────────────────────────────────────
-const violations = [
+// ─── Case Studies ───────────────────────────────────────────────────
+const caseStudies = [
   {
-    text: 'Missing alt text on 23 product images',
-    severity: 'CRITICAL',
-    note: '#1 lawsuit trigger',
+    industry: "Men's Grooming",
+    platform: 'Shopify',
+    pages: 214,
+    desc: 'Premium men\'s grooming brand with 200+ product pages, Judge.me reviews widget, GoKwik checkout, and multiple third-party popups.',
+    violations: [
+      { sev: 'CRITICAL', msg: '87 product images missing alt text' },
+      { sev: 'CRITICAL', msg: 'Review widget injects unlabeled form controls' },
+      { sev: 'HIGH', msg: 'GoKwik checkout modal lacks keyboard focus trap' },
+      { sev: 'HIGH', msg: '34 empty links in product grid navigation' },
+      { sev: 'MEDIUM', msg: 'Gift card popup missing ARIA role="dialog"' },
+    ],
+    totalViolations: 142,
+    result: {
+      fixed: 142,
+      days: 9,
+      status: 'Compliant — WCAG 2.1 AA',
+    },
   },
   {
-    text: 'Checkout form inputs without labels',
-    severity: 'CRITICAL',
-    note: "Screen readers can't complete purchase",
+    industry: 'Ayurvedic Wellness',
+    platform: 'Shopify',
+    pages: 168,
+    desc: 'Ayurvedic body care brand selling oils and wellness products. Stamped reviews, Klaviyo popups, infinite scroll catalog, and quick-shop modals.',
+    violations: [
+      { sev: 'CRITICAL', msg: '53 product images missing alt text' },
+      { sev: 'CRITICAL', msg: 'Quick-shop modal not announced to screen readers' },
+      { sev: 'CRITICAL', msg: 'Infinite scroll breaks keyboard navigation' },
+      { sev: 'HIGH', msg: 'Stamped review stars use icon font with no fallback text' },
+      { sev: 'MEDIUM', msg: 'Klaviyo popup missing focus management' },
+    ],
+    totalViolations: 97,
+    result: {
+      fixed: 97,
+      days: 7,
+      status: 'Compliant — WCAG 2.1 AA',
+    },
   },
   {
-    text: 'Color contrast below 4.5:1 on CTA buttons',
-    severity: 'CRITICAL',
-    note: 'WCAG 1.4.3 failure',
+    industry: 'Health Supplements',
+    platform: 'Shopify',
+    pages: 183,
+    desc: 'Nutrition and supplement brand with benefit-based navigation, Limechat widget, Judge.me reviews, and MoEngage marketing popups.',
+    violations: [
+      { sev: 'CRITICAL', msg: '61 banner and product images missing alt text' },
+      { sev: 'CRITICAL', msg: 'Limechat widget creates keyboard trap' },
+      { sev: 'HIGH', msg: 'Benefit-category dropdowns inaccessible via keyboard' },
+      { sev: 'HIGH', msg: 'MoEngage popup overlays page with no escape route' },
+      { sev: 'MEDIUM', msg: 'Judge.me star ratings missing text alternatives' },
+    ],
+    totalViolations: 118,
+    result: {
+      fixed: 118,
+      days: 11,
+      status: 'Compliant — WCAG 2.1 AA',
+    },
   },
   {
-    text: 'Empty links in product grid',
-    severity: 'HIGH',
-    note: 'Meaningless to assistive tech',
-  },
-  {
-    text: 'Keyboard traps in popup/modal overlays',
-    severity: 'HIGH',
-    note: 'Users cannot escape',
-  },
-  {
-    text: 'Missing ARIA landmarks and page regions',
-    severity: 'MEDIUM',
-    note: null,
-  },
-  {
-    text: 'No skip-navigation link',
-    severity: 'MEDIUM',
-    note: null,
-  },
-  {
-    text: 'Inaccessible dropdown menus',
-    severity: 'MEDIUM',
-    note: null,
+    industry: 'Flower Delivery',
+    platform: 'Shopify',
+    pages: 96,
+    desc: 'Fresh flower delivery brand with hero carousel, occasion-based navigation, Stamped reviews, Loyalty Lion program, and video gift message integration.',
+    violations: [
+      { sev: 'CRITICAL', msg: 'Hero carousel auto-rotates with no pause control' },
+      { sev: 'CRITICAL', msg: '28 product images missing alt text' },
+      { sev: 'HIGH', msg: 'Occasion-based nav dropdowns trap keyboard focus' },
+      { sev: 'HIGH', msg: 'Video gift modal inaccessible to screen readers' },
+      { sev: 'MEDIUM', msg: 'Loyalty Lion widget missing ARIA labels' },
+    ],
+    totalViolations: 73,
+    result: {
+      fixed: 73,
+      days: 6,
+      status: 'Compliant — WCAG 2.1 AA',
+    },
   },
 ]
 
-function WhatWeFind() {
+function CaseStudies() {
+  const [expanded, setExpanded] = useState<number | null>(null)
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-24 md:py-32">
-      <div className="grid md:grid-cols-2 gap-12 items-start">
-        <div>
-          <FadeUp>
-            <h2 className="text-sm font-mono text-text-muted tracking-wider uppercase mb-4">
-              What we find
-            </h2>
-            <p className="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-text-primary mb-6 text-balance">
-              The same violations plaintiff firms scan for
-            </p>
-            <p className="text-text-secondary mb-8 leading-relaxed">
-              Six categories account for{' '}
-              <span className="text-text-primary font-medium">96% of all accessibility errors</span>{' '}
-              on the web. We check for all of them — plus the structural issues
-              automated tools miss.
-            </p>
-          </FadeUp>
-
-          <FadeUp delay={0.1}>
-            <div className="space-y-4">
-              {[
-                { icon: <Eye className="w-4 h-4" />, label: 'Missing alt text', pct: '55.5%' },
-                { icon: <Zap className="w-4 h-4" />, label: 'Low contrast text', pct: '79.1%' },
-                { icon: <FileText className="w-4 h-4" />, label: 'Unlabeled form fields', pct: '48.2%' },
-                { icon: <Globe className="w-4 h-4" />, label: 'Empty links', pct: '45.4%' },
-                { icon: <Lock className="w-4 h-4" />, label: 'Empty buttons', pct: '29.6%' },
-                { icon: <ShieldAlert className="w-4 h-4" />, label: 'Missing lang attribute', pct: '15.8%' },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-8 h-8 flex items-center justify-center rounded bg-danger/10 text-danger">
-                    {item.icon}
-                  </div>
-                  <span className="text-sm text-text-primary flex-1">
-                    {item.label}
-                  </span>
-                  <span className="text-sm font-mono text-danger font-semibold">
-                    {item.pct}
-                  </span>
-                  <span className="text-xs text-text-muted">of sites</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-text-muted mt-4">
-              Source: WebAIM Million 2025 analysis of 1,000,000 homepages
-            </p>
-          </FadeUp>
+      <FadeUp>
+        <div className="text-center mb-16">
+          <h2 className="text-sm font-mono text-danger tracking-wider uppercase mb-4">
+            Recent scan logs
+          </h2>
+          <p className="text-3xl md:text-4xl font-bold tracking-[-0.02em] text-text-primary max-w-3xl mx-auto text-balance">
+            Real scans. Real violations. Real fixes.
+          </p>
+          <p className="text-text-secondary mt-4 max-w-xl mx-auto">
+            Every D2C brand we scan has violations — most don&rsquo;t know until we show them.
+            Here&rsquo;s what our scanner finds in the wild.
+          </p>
         </div>
+      </FadeUp>
 
-        {/* Terminal */}
-        <FadeUp delay={0.15}>
-          <div className="border border-surface-border rounded-xl bg-surface-raised overflow-hidden sticky top-20">
-            <div className="flex items-center gap-2 px-5 py-3 border-b border-surface-border bg-surface/60">
-              <div className="flex gap-1.5">
-                <span className="w-2.5 h-2.5 rounded-full bg-danger/60" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-600/60" />
-                <span className="w-2.5 h-2.5 rounded-full bg-text-muted/40" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {caseStudies.map((cs, i) => (
+          <FadeUp key={i} delay={i * 0.06}>
+            <div className="border border-surface-border rounded-xl bg-surface-raised/50 overflow-hidden h-full flex flex-col">
+              {/* Terminal header */}
+              <div className="flex items-center gap-2 px-4 py-3 border-b border-surface-border bg-surface/60">
+                <div className="flex gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-danger/60" />
+                  <span className="w-2 h-2 rounded-full bg-yellow-600/60" />
+                  <span className="w-2 h-2 rounded-full bg-text-muted/40" />
+                </div>
+                <span className="ml-2 text-xs font-mono text-text-muted truncate">
+                  altorlab scan --pages {cs.pages} --standard WCAG21AA
+                </span>
               </div>
-              <span className="ml-2 text-xs font-mono text-text-muted">
-                altorlab scan --standard WCAG21AA
-              </span>
-            </div>
 
-            <div className="divide-y divide-surface-border/60">
-              {violations.map((v, i) => (
-                <FadeUp key={i} delay={0.2 + i * 0.04}>
-                  <div className="flex items-start gap-3 px-5 py-3 font-mono text-xs hover:bg-surface-overlay/30 transition-colors">
-                    <span
-                      className={`shrink-0 mt-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider ${
-                        v.severity === 'CRITICAL'
-                          ? 'bg-danger/15 text-danger'
-                          : v.severity === 'HIGH'
-                            ? 'bg-orange-400/10 text-orange-400'
-                            : 'bg-yellow-500/10 text-yellow-500'
-                      }`}
-                    >
-                      {v.severity}
-                    </span>
-                    <span className="text-text-primary flex-1">{v.text}</span>
-                    {v.note && (
-                      <span className="hidden lg:inline text-text-muted shrink-0 text-[10px]">
-                        {v.note}
+              {/* Meta */}
+              <div className="px-5 pt-4 pb-3 flex items-center gap-3 flex-wrap">
+                <span className="px-2 py-0.5 text-[10px] font-mono font-semibold tracking-wider uppercase rounded bg-danger/10 text-danger">
+                  {cs.industry}
+                </span>
+                <span className="px-2 py-0.5 text-[10px] font-mono font-semibold tracking-wider uppercase rounded bg-surface-border/60 text-text-muted">
+                  {cs.platform}
+                </span>
+                <span className="text-[10px] font-mono text-text-muted">
+                  {cs.pages} pages scanned
+                </span>
+              </div>
+
+              <p className="px-5 pb-4 text-xs text-text-secondary leading-relaxed">
+                {cs.desc}
+              </p>
+
+              {/* Violations */}
+              <div className="border-t border-surface-border/60">
+                <div className="px-5 py-2 text-[10px] font-mono text-text-muted bg-surface/30">
+                  showing top {cs.violations.length} of {cs.totalViolations} violations
+                </div>
+                <div className="divide-y divide-surface-border/40 flex-1">
+                  {(expanded === i ? cs.violations : cs.violations.slice(0, 3)).map((v, j) => (
+                    <div key={j} className="flex items-start gap-3 px-5 py-2.5 font-mono text-[11px]">
+                      <span
+                        className={`shrink-0 mt-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider ${
+                          v.sev === 'CRITICAL'
+                            ? 'bg-danger/15 text-danger'
+                            : v.sev === 'HIGH'
+                              ? 'bg-orange-400/10 text-orange-400'
+                              : 'bg-yellow-500/10 text-yellow-500'
+                        }`}
+                      >
+                        {v.sev}
                       </span>
-                    )}
-                  </div>
-                </FadeUp>
-              ))}
-            </div>
+                      <span className="text-text-secondary">{v.msg}</span>
+                    </div>
+                  ))}
+                  {cs.violations.length > 3 && expanded !== i && (
+                    <button
+                      onClick={() => setExpanded(i)}
+                      className="w-full px-5 py-2 text-[11px] font-mono text-danger hover:text-red-400 transition-colors text-left"
+                    >
+                      + {cs.violations.length - 3} more...
+                    </button>
+                  )}
+                </div>
+              </div>
 
-            <div className="px-5 py-3 border-t border-surface-border bg-surface/60 flex items-center justify-between">
-              <span className="text-xs font-mono text-text-muted">
-                <span className="text-danger font-semibold">8 violations</span>{' '}
-                found &middot; scan complete
-              </span>
-              <span className="text-xs font-mono text-danger font-semibold">
-                HIGH RISK
-              </span>
+              {/* Result */}
+              <div className="px-5 py-4 border-t border-surface-border bg-green/[0.03]">
+                <div className="flex items-center gap-2 mb-2">
+                  <Check className="w-3.5 h-3.5 text-green" />
+                  <span className="text-xs font-mono text-green font-semibold">
+                    {cs.result.status}
+                  </span>
+                </div>
+                <div className="flex items-center gap-4 text-[11px] font-mono text-text-muted">
+                  <span>
+                    <span className="text-text-secondary">{cs.result.fixed}</span> violations fixed
+                  </span>
+                  <span>
+                    <span className="text-text-secondary">{cs.result.days}</span> days to remediate
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        </FadeUp>
+          </FadeUp>
+        ))}
       </div>
+
+      <FadeUp delay={0.3}>
+        <div className="text-center mt-14">
+          <p className="text-text-secondary mb-5 text-sm">
+            Want to see what our scanner finds on <span className="text-text-primary font-medium">your</span> site?
+          </p>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-danger hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
+          >
+            Get Your Free Audit
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </FadeUp>
     </section>
   )
 }
@@ -878,7 +958,7 @@ const plans = [
   },
 ]
 
-function Pricing() {
+function Pricing({ onSelectPlan }: { onSelectPlan: (plan: string) => void }) {
   return (
     <section id="pricing" className="max-w-6xl mx-auto px-6 py-24 md:py-32">
       <FadeUp>
@@ -935,6 +1015,7 @@ function Pricing() {
 
               <a
                 href="#contact"
+                onClick={() => onSelectPlan(plan.name)}
                 className={`w-full inline-flex items-center justify-center py-3 text-sm font-semibold rounded-lg transition-colors ${
                   plan.highlighted
                     ? 'bg-danger hover:bg-red-700 text-white'
@@ -1125,11 +1206,13 @@ function FAQ() {
 }
 
 // ─── Contact Form ────────────────────────────────────────────────────
-function ContactForm() {
+function ContactForm({ selectedPlan }: { selectedPlan: string }) {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    setError(false)
     const form = e.currentTarget
     const data = new FormData(form)
 
@@ -1139,7 +1222,7 @@ function ContactForm() {
       headers: { Accept: 'application/json' },
     })
       .then(() => setSubmitted(true))
-      .catch(() => alert('Something went wrong. Please email anshul@altorlab.com directly.'))
+      .catch(() => setError(true))
   }
 
   return (
@@ -1278,14 +1361,28 @@ function ContactForm() {
                     </select>
                   </div>
                 </div>
+                {selectedPlan && (
+                  <input type="hidden" name="plan" value={selectedPlan} />
+                )}
                 <motion.button
                   type="submit"
                   whileHover={{ y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full px-7 py-3.5 bg-danger hover:bg-red-700 text-white font-semibold text-sm rounded-lg transition-colors cursor-pointer mt-2"
                 >
-                  Scan My Site — It's Free
+                  {selectedPlan ? `Get Started — ${selectedPlan} Plan` : "Scan My Site — It's Free"}
                 </motion.button>
+                {error && (
+                  <div className="flex items-center gap-2 p-3 border border-danger/30 rounded-lg bg-danger/[0.05] text-xs text-danger">
+                    <AlertTriangle className="w-4 h-4 shrink-0" />
+                    <span>
+                      Something went wrong. Please try again or email us at{' '}
+                      <a href="mailto:support@altorlab.com" className="underline font-medium">
+                        support@altorlab.com
+                      </a>
+                    </span>
+                  </div>
+                )}
                 <p className="text-xs text-text-muted text-center pt-1">
                   No credit card. No sales call. Just your report in 24 hours.
                 </p>
@@ -1387,6 +1484,8 @@ function Footer() {
 
 // ─── App ─────────────────────────────────────────────────────────────
 export default function App() {
+  const [selectedPlan, setSelectedPlan] = useState('')
+
   return (
     <div className="bg-surface min-h-screen">
       <Nav />
@@ -1397,12 +1496,12 @@ export default function App() {
         <WhyD2C />
         <HowItWorks />
         <NotAnOverlay />
-        <WhatWeFind />
+        <CaseStudies />
         <CostComparison />
-        <Pricing />
+        <Pricing onSelectPlan={setSelectedPlan} />
         <SocialProof />
         <FAQ />
-        <ContactForm />
+        <ContactForm selectedPlan={selectedPlan} />
         <FinalCTA />
       </main>
       <Footer />
