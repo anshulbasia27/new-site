@@ -1,3 +1,4 @@
+import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import { FadeUp } from './FadeUp'
 
@@ -16,13 +17,15 @@ export function GuideCTA() {
             We'll scan your entire site and deliver a prioritized risk report within
             24 hours. No credit card, no sales call.
           </p>
-          <a
+          <motion.a
             href="/#contact"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-danger hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
           >
             Get Your Free Audit
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </motion.a>
         </div>
       </FadeUp>
     </section>

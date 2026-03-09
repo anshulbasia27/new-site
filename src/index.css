@@ -23,6 +23,19 @@
     background-color: rgba(220, 38, 38, 0.3);
     color: #fff;
   }
+
+  /* ─── Respect user motion preferences ─────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer utilities {
@@ -68,12 +81,17 @@
 
 .prose-guide a {
   color: #dc2626;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.15s;
+  text-decoration: none;
+  background-image: linear-gradient(#dc2626, #dc2626);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.2s ease;
 }
 .prose-guide a:hover {
   color: #ef4444;
+  background-image: linear-gradient(#ef4444, #ef4444);
+  background-size: 100% 1px;
 }
 
 .prose-guide strong {
@@ -141,6 +159,70 @@
 
 .prose-guide tbody tr:hover {
   background: rgba(255, 255, 255, 0.02);
+}
+
+/* ─── Guide callout boxes ──────────────────────────────────────────── */
+.callout-danger {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.04);
+}
+.callout-danger::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background: #dc2626;
+}
+
+.callout-info {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.callout-info::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background: #6b6b6b;
+}
+
+.stat-highlight {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.03);
+}
+.stat-highlight-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #dc2626;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.stat-highlight-label {
+  font-size: 0.875rem;
+  color: #a3a3a3;
+  line-height: 1.5;
 }
 
 /* Ticker animation */

@@ -36,11 +36,15 @@ export default function WCAGExplainedGuide() {
           benchmark. The Department of Justice has also cited WCAG 2.1 AA in its guidance on web
           accessibility.
         </p>
-        <p>
-          For ecommerce store owners, this matters because <strong>WCAG 2.1 Level AA is effectively the
-          legal standard</strong> your site will be measured against if you receive a demand letter or
-          lawsuit. Understanding what it requires is the first step to protecting your business.
-        </p>
+
+        <div className="callout-danger">
+          <p className="text-sm text-text-secondary leading-relaxed !mb-0">
+            <strong>WCAG 2.1 Level AA is effectively the legal standard</strong> your site will be measured
+            against if you receive a demand letter or lawsuit. Understanding what it requires is the first
+            step to protecting your business.
+          </p>
+        </div>
+
         <p>
           The current version is WCAG 2.1, published in 2018. (WCAG 2.2 was released in 2023 but 2.1 AA
           remains the most commonly referenced standard in litigation.) It contains 78 success criteria
@@ -170,11 +174,13 @@ export default function WCAGExplainedGuide() {
           </table>
         </div>
 
-        <p>
-          The first three — missing alt text, unlabeled forms, and contrast failures — appear on virtually
-          every ecommerce site we scan. They are also the violations most commonly cited in demand letters
-          because they're easy to detect with automated tools and easy to prove in court.
-        </p>
+        <div className="callout-info">
+          <p className="text-sm text-text-secondary leading-relaxed !mb-0">
+            The first three — missing alt text, unlabeled forms, and contrast failures — appear on virtually
+            every ecommerce site we scan. They're also the violations most commonly cited in demand letters
+            because they're easy to detect with automated tools and easy to prove in court.
+          </p>
+        </div>
 
         {/* Section 4 */}
         <h2 id="how-to-test">How to Test Your Site</h2>
@@ -204,11 +210,14 @@ export default function WCAGExplainedGuide() {
             anything cut off, overlapping, or hidden? Can you still complete a purchase?
           </li>
         </ul>
-        <p>
-          Automated tools are a good starting point, but they miss 60–70% of real accessibility barriers.
-          Issues like keyboard traps, logical reading order, and whether alt text is actually meaningful
-          (vs. just present) require human judgment.
-        </p>
+
+        <div className="stat-highlight">
+          <span className="stat-highlight-value">60–70%</span>
+          <span className="stat-highlight-label">
+            of real accessibility barriers are missed by automated tools. Issues like keyboard traps,
+            logical reading order, and meaningful alt text require human judgment.
+          </span>
+        </div>
 
         {/* Section 5 */}
         <h2 id="conformance-levels">A vs AA vs AAA: What Conformance Level Do You Need?</h2>
@@ -245,11 +254,14 @@ export default function WCAGExplainedGuide() {
           </table>
         </div>
 
-        <p>
-          <strong>WCAG 2.1 Level AA is the standard you should target.</strong> It includes all Level A
-          criteria plus additional requirements that courts expect. It's achievable for any ecommerce site
-          and provides meaningful legal protection.
-        </p>
+        <div className="callout-danger">
+          <p className="text-sm text-text-secondary leading-relaxed !mb-0">
+            <strong>WCAG 2.1 Level AA is the standard you should target.</strong> It includes all Level A
+            criteria plus additional requirements that courts expect. It's achievable for any ecommerce site
+            and provides meaningful legal protection.
+          </p>
+        </div>
+
         <p>
           Level AAA is admirable but not the legal benchmark — and some AAA criteria (like providing sign
           language for all video content) aren't practical for most online stores. Focus on AA first, and

@@ -36,11 +36,14 @@ export default function ADAComplianceGuide() {
           courts reference <strong>WCAG 2.1 Level AA</strong> (Web Content Accessibility Guidelines) as the
           technical standard your site should meet.
         </p>
-        <p>
-          There is no formal ADA certification for websites. There is no government checklist you can complete
-          and file. Instead, compliance is determined by whether your site meets WCAG standards — and the primary
-          enforcement mechanism is <strong>private lawsuits</strong>.
-        </p>
+
+        <div className="callout-info">
+          <p className="text-sm text-text-secondary leading-relaxed !mb-0">
+            There is no formal ADA certification for websites. There is no government checklist you can complete
+            and file. Compliance is determined by whether your site meets WCAG standards — and the primary
+            enforcement mechanism is <strong>private lawsuits</strong>.
+          </p>
+        </div>
 
         {/* Section 2 */}
         <h2 id="dominos-case">The Case That Changed Everything: Domino's v. Robles</h2>
@@ -61,19 +64,31 @@ export default function ADAComplianceGuide() {
           <br />
           <span className="text-text-muted text-sm">— Ninth Circuit, Robles v. Domino's Pizza (2019)</span>
         </blockquote>
-        <p>
-          This ruling opened the floodgates. Since 2019, ADA digital lawsuits have increased every year, with
-          <strong> 4,187 filed in 2024 alone</strong>. And the #1 targeted industry? Retail and ecommerce.
-        </p>
+
+        <div className="stat-highlight">
+          <span className="stat-highlight-value">4,187</span>
+          <span className="stat-highlight-label">
+            ADA digital lawsuits filed in 2024 — up every year since the Domino's ruling.
+            Retail and ecommerce is the #1 targeted industry.
+          </span>
+        </div>
 
         {/* Section 3 */}
         <h2 id="why-d2c-targeted">Why D2C Brands Are the #1 Target</h2>
         <p>
           Plaintiff law firms — sometimes called "serial filers" — have turned ADA website lawsuits into a
           volume business. They use automated scanning tools to crawl thousands of ecommerce sites daily,
-          looking for common WCAG violations. When they find them (and <strong>94.8% of websites have
-          detectable failures</strong>, per the WebAIM Million 2025 Report), they file suit.
+          looking for common WCAG violations. When they find them, they file suit.
         </p>
+
+        <div className="stat-highlight">
+          <span className="stat-highlight-value">94.8%</span>
+          <span className="stat-highlight-label">
+            of websites have detectable WCAG failures, per the WebAIM Million 2025 Report.
+            Plaintiff firms only need to run a tool against your URL.
+          </span>
+        </div>
+
         <p>D2C brands are disproportionately targeted for three reasons:</p>
         <ul>
           <li>
@@ -161,11 +176,13 @@ export default function ADAComplianceGuide() {
           settlement amount is deliberately calibrated — high enough to fund the plaintiff firm's operation,
           low enough that most businesses pay rather than spend $50K+ on legal defense.
         </p>
-        <p>
-          And here's the worst part: <strong>29% of defendants get sued again within 12 months</strong>.
-          Settling doesn't make you immune. If you don't fix the underlying violations, another plaintiff
-          firm will find them.
-        </p>
+
+        <div className="callout-danger">
+          <p className="text-sm text-text-secondary leading-relaxed !mb-0">
+            <strong>29% of defendants get sued again within 12 months.</strong> Settling doesn't make you
+            immune. If you don't fix the underlying violations, another plaintiff firm will find them.
+          </p>
+        </div>
 
         {/* Section 5 */}
         <h2 id="protect-your-brand">How to Protect Your D2C Brand</h2>
