@@ -34,6 +34,115 @@
   }
 }
 
+/* ─── Article prose styles ─────────────────────────────────────────── */
+.prose-guide h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f5f5f5;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  scroll-margin-top: 5rem;
+}
+
+.prose-guide h2:first-child {
+  margin-top: 0;
+}
+
+.prose-guide h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 5rem;
+}
+
+.prose-guide p {
+  color: #a3a3a3;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.prose-guide a {
+  color: #dc2626;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
+}
+.prose-guide a:hover {
+  color: #ef4444;
+}
+
+.prose-guide strong {
+  color: #f5f5f5;
+  font-weight: 600;
+}
+
+.prose-guide ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #a3a3a3;
+}
+
+.prose-guide ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.prose-guide code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: #e5e5e5;
+}
+
+.prose-guide blockquote {
+  border-left: 3px solid #dc2626;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  background: rgba(220, 38, 38, 0.03);
+  border-radius: 0 8px 8px 0;
+  color: #d4d4d4;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.prose-guide table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.prose-guide thead th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.prose-guide tbody td {
+  padding: 0.75rem 1rem;
+  color: #a3a3a3;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  vertical-align: top;
+}
+
+.prose-guide tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
 /* Ticker animation */
 .ticker-track {
   display: flex;
