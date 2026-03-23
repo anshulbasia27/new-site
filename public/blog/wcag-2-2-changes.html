@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WCAG 2.2 vs 2.1: E-Commerce Impact</title>
+  <meta name="description" content="WCAG 2.2 adds new criteria that affect e-commerce UX and legal exposure. See what changed, what was removed, and what to fix first." />
+  <link rel="canonical" href="https://altorlab.app/blog/wcag-2-2-changes.html" />
+  <meta property="og:title" content="WCAG 2.2 vs WCAG 2.1 — What Changed and What It Means" />
+  <meta property="og:description" content="A practical breakdown of WCAG 2.2 updates and how they impact D2C storefront compliance." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://altorlab.app/blog/wcag-2-2-changes.html" />
+  <meta property="og:image" content="https://altorlab.app/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WCAG 2.2 vs 2.1 — E-Commerce Breakdown" />
+  <meta name="twitter:description" content="New WCAG 2.2 criteria can affect checkout and interaction-heavy D2C flows." />
+  <meta name="twitter:image" content="https://altorlab.app/og-image.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"WCAG 2.2 vs WCAG 2.1 — What Changed and What It Means","author":{"@type":"Organization","name":"AltorLab"},"publisher":{"@type":"Organization","name":"AltorLab"},"datePublished":"2026-03-23","dateModified":"2026-03-23","mainEntityOfPage":"https://altorlab.app/blog/wcag-2-2-changes.html","image":"https://altorlab.app/og-image.svg"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the most important WCAG 2.2 additions for e-commerce?","acceptedAnswer":{"@type":"Answer","text":"Focus Appearance, Dragging Movements, and Target Size (Minimum) are among the most practical additions for interaction-heavy storefronts."}},{"@type":"Question","name":"Was anything removed in WCAG 2.2?","acceptedAnswer":{"@type":"Answer","text":"SC 4.1.1 Parsing was removed in WCAG 2.2 due to modern parser consistency assumptions, but robust code quality still matters."}},{"@type":"Question","name":"Do WCAG 2.1 compliant sites need updates?","acceptedAnswer":{"@type":"Answer","text":"Often yes. Teams should review new 2.2 criteria and close gaps, especially in custom interactive components."}},{"@type":"Question","name":"Is WCAG 2.2 legally mandatory everywhere?","acceptedAnswer":{"@type":"Answer","text":"Legal references vary by jurisdiction, but 2.2 alignment increasingly reflects current best practice and risk reduction."}},{"@type":"Question","name":"What should brands prioritize first?","acceptedAnswer":{"@type":"Answer","text":"Prioritize criteria that affect checkout, forms, keyboard usability, and pointer interactions."}}]}</script>
+  <style>body{margin:0;background:#080b12;color:#e5e7eb;font-family:'IBM Plex Sans',sans-serif;line-height:1.75}main{max-width:920px;margin:0 auto;padding:48px 20px 80px}h1,h2,h3{color:#f8fafc;line-height:1.25}.eyebrow{font-family:'IBM Plex Mono',monospace;color:#93c5fd;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}a{color:#7dd3fc}.cta{display:inline-block;margin:18px 0;background:#22d3ee;color:#082f49;text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:700}</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">WCAG 2.2 vs 2.1</p>
+  <h1>WCAG 2.2 vs WCAG 2.1 — What Changed and What It Means</h1>
+  <p>Most D2C teams still benchmark against WCAG 2.1 AA, but WCAG 2.2 changed the practical bar for modern interaction patterns. If your storefront relies on drag interfaces, compact tap targets, or custom focus styling, the 2.2 update is not academic. It affects production UX, audit outcomes, and legal readiness.</p>
+  <p>The key point is simple: WCAG 2.2 does not rewrite everything. It tightens specific areas where real users still struggle, especially on mobile and high-interaction workflows common in e-commerce.</p>
+  <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+
+  <h2>New success criteria in WCAG 2.2</h2>
+  <h3>2.4.11 Focus Appearance (Minimum)</h3>
+  <p>Focus indicators must be clearly visible with sufficient contrast and area. This impacts custom button styles, link resets, and component libraries that hide outlines.</p>
+  <h3>2.4.12 Focus Not Obscured (Minimum)</h3>
+  <p>Focused elements should not be fully hidden behind sticky headers, popups, or overlays. Many mobile nav and coupon UI patterns fail this in commerce flows.</p>
+  <h3>2.4.13 Focus Not Obscured (Enhanced)</h3>
+  <p>An enhanced level that encourages stronger focus visibility and unobstructed interaction.</p>
+  <h3>2.5.7 Dragging Movements</h3>
+  <p>Actions requiring drag should have non-drag alternatives. This matters for sliders, range controls, and image manipulation UI.</p>
+  <h3>2.5.8 Target Size (Minimum)</h3>
+  <p>Interactive targets need adequate size/spacing for touch and motor accessibility. Dense mobile product cards often fail this.</p>
+  <h3>3.2.6 Consistent Help</h3>
+  <p>If help mechanisms exist, they should appear in consistent locations. Relevant for support links, chat, and contact affordances.</p>
+  <h3>3.3.7 Redundant Entry</h3>
+  <p>Users should not repeatedly enter the same information unnecessarily. Checkout forms and account settings flows are high-impact zones.</p>
+  <h3>3.3.8 Accessible Authentication (Minimum)</h3>
+  <p>Authentication should not depend on cognitive-function tests without alternatives. Critical for password and verification design.</p>
+
+  <h2>What was removed in WCAG 2.2</h2>
+  <p><strong>SC 4.1.1 Parsing</strong> was removed. This does not mean HTML quality no longer matters. It means modern browsers and assistive tech handle parser differences better than when earlier versions were drafted. Robust markup remains essential for interoperability and screen-reader clarity.</p>
+
+  <h2>Impact on existing compliance programs</h2>
+  <p>If your team has only pass/fail checklists for 2.1, update your testing matrix now. The largest impact typically appears in:</p>
+  <ul>
+    <li>custom focus styling across design systems</li>
+    <li>sticky headers that obscure focused controls</li>
+    <li>mobile tap targets in product discovery grids</li>
+    <li>drag-only filter or customization interactions</li>
+    <li>authentication and account security flows</li>
+  </ul>
+
+  <h2>Adoption timeline and legal reality</h2>
+  <p>Jurisdictions and legal documents vary in references to specific WCAG versions, but market expectation moves faster than formal regulation text. Plaintiffs and experts increasingly evaluate against current best practice. Waiting for explicit mandates can leave teams behind both technically and defensibly.</p>
+
+  <h2>Which criteria matter most for e-commerce first</h2>
+  <ol>
+    <li>Focus Appearance + Focus Not Obscured for keyboard pathways in nav/cart/account.</li>
+    <li>Target Size for mobile conversion surfaces and compact UI controls.</li>
+    <li>Redundant Entry in checkout forms and account workflows.</li>
+    <li>Accessible Authentication where friction or captcha-like tasks exist.</li>
+  </ol>
+
+  <h2>Implementation playbook</h2>
+  <p>Audit your component library first, not individual pages. If your base button, link, modal, and form controls meet 2.2 expectations, page-level compliance improves quickly. Next, test live user journeys end-to-end with keyboard and screen-reader workflows. Finally, add regression tests to release pipelines so updates do not reintroduce old failures.</p>
+
+  <h2>Commerce-specific examples of 2.2 failures</h2>
+  <h3>Focus obscured by sticky promo bars</h3>
+  <p>Many storefronts pin headers, announcement bars, and cookie banners. When focus moves to elements hidden beneath these layers, keyboard users lose context. This is now a direct 2.2 concern and should be tested on mobile and desktop breakpoints.</p>
+  <h3>Tiny target sizes in dense product grids</h3>
+  <p>Quick-add icons, wishlist hearts, and variant swatches are often too small on mobile. Even if taps technically work, poor target geometry harms operability and can violate minimum target expectations.</p>
+  <h3>Drag-only interactions in configurators</h3>
+  <p>Custom product builders and image sliders frequently rely on drag without equivalent click/keyboard alternatives. WCAG 2.2 requires alternatives for users who cannot perform drag gestures reliably.</p>
+  <h3>Authentication flows with cognitive burden</h3>
+  <p>Password rules, one-time code steps, and anti-bot interactions can become inaccessible if they depend on memory or puzzle-like tasks without alternatives.</p>
+
+  <h2>Migration checklist for frontend teams</h2>
+  <ol>
+    <li>Review design tokens for focus states and target-size spacing rules.</li>
+    <li>Refactor shared components before page-by-page patching.</li>
+    <li>Create QA scripts for focus visibility and obstruction scenarios.</li>
+    <li>Test core paths with keyboard only at every release candidate.</li>
+    <li>Document 2.2 conformance deltas and unresolved exceptions.</li>
+  </ol>
+  <p>Teams that handle 2.2 at the system level avoid endless tactical fixes and gain durable compliance improvements across future launches.</p>
+
+  <h2>Common migration mistake to avoid</h2>
+  <p>Do not "bolt on" 2.2 fixes page-by-page without updating the underlying design system. That approach creates fragile patches and inconsistent behavior across templates. Fix core components first, then propagate improvements through shared patterns. You will close issues faster and prevent backsliding in future releases.</p>
+
+  <h2>Internal reading</h2>
+  <ul>
+    <li><a href="/blog/ecommerce-accessibility-compliance.html">E-Commerce Accessibility Compliance — The Complete 2026 Guide</a></li>
+    <li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li>
+    <li><a href="/blog/woocommerce-accessibility.html">WooCommerce Accessibility — Complete Compliance Guide</a></li>
+  </ul>
+
+  <h2>FAQs</h2>
+  <h3>Can we stay on WCAG 2.1 and still reduce risk?</h3>
+  <p>You can improve materially on 2.1, but mapping to 2.2 closes newer interaction gaps that are common in modern commerce UI.</p>
+  <h3>Are mobile target sizes now a bigger issue?</h3>
+  <p>Yes. Small touch targets in dense layouts are a frequent usability and compliance concern.</p>
+  <h3>What team should own 2.2 migration?</h3>
+  <p>Design systems and frontend engineering should co-own implementation, with QA validating user-path outcomes.</p>
+  <h3>How long does migration take?</h3>
+  <p>For focused scopes, critical criteria can be addressed in weeks; full component hardening may take multiple sprints.</p>
+
+  <h2>Sources</h2>
+  <ul>
+    <li>W3C WCAG 2.2 Recommendation and Understanding docs.</li>
+    <li>W3C change log comparing WCAG 2.1 and 2.2 criteria.</li>
+    <li>Accessibility legal commentary on evolving conformance expectations.</li>
+  </ul>
+
+  <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+</main>
+</body>
+</html>
