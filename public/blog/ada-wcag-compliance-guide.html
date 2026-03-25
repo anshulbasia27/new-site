@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADA/WCAG Compliance Guide: Make Your Site Accessible</title>
+<meta name="description" content="Learn how to meet ADA and WCAG standards for your website. Practical steps for e-commerce businesses to ensure digital accessibility.">
+<link rel="canonical" href="https://altorlab.app/blog/ada-wcag-compliance-guide">
+<meta property="og:title" content="ADA/WCAG Compliance Guide: Make Your Site Accessible">
+<meta property="og:description" content="Learn how to meet ADA and WCAG standards for your website. Practical steps for e-commerce businesses to ensure digital accessibility.">
+<meta property="og:url" content="https://altorlab.app/blog/ada-wcag-compliance-guide">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "ADA/WCAG Compliance Guide: Make Your Site Accessible",
+  "author": {"@type": "Organization", "name": "AltorLab"},
+  "publisher": {"@type": "Organization", "name": "AltorLab"},
+  "datePublished": "2026-03-25",
+  "url": "https://altorlab.app/blog/ada-wcag-compliance-guide"
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 2rem; line-height: 1.3; color: #f5f5f5; }
+h2 { font-size: 1.5rem; color: #f5f5f5; margin-top: 2rem; }
+h3 { font-size: 1.2rem; color: #d4a574; }
+a { color: #d4a574; }
+pre { background: #1a1a1a; padding: 16px; border-radius: 8px; overflow-x: auto; }
+code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav><a href="/">← Home</a> · <a href="/blog/">Blog</a></nav>
+<article>
+```html
+<article>
+<h1>ADA/WCAG Compliance Guide: Why 77% of E-Commerce Lawsuits Target Stores Under $5M in Revenue</h1>
+
+<p>In 2023, a Shopify store selling handmade candles received a demand letter claiming their website violated the Americans with Disabilities Act. The owner had never heard of WCAG. The settlement? $18,000 plus attorney fees, totaling $31,400. The store's annual revenue was $340,000.</p>
+
+<p>This isn't an outlier. It's the business model. Plaintiff law firms use automated scrapers to find non-compliant e-commerce sites, then file in bulk. According to UsableNet's 2024 Accessibility Lawsuit Report, 77% of ADA web accessibility lawsuits filed in federal court targeted businesses with revenue under $5 million. Small D2C brands are the preferred defendants because they settle faster and rarely have in-house legal teams.</p>
+
+<h2>What ADA/WCAG Compliance Actually Means for Your Store</h2>
+
+<p>The Americans with Disabilities Act doesn't explicitly mention websites. That ambiguity is the entire problem. Federal courts have increasingly ruled that Title III of the ADA—which requires places of public accommodation to be accessible—applies to commercial websites. The technical standard courts reference is WCAG 2.1 Level AA, published by the World Wide Web Consortium.</p>
+
+<p>WCAG compliance is not a certification. There's no government body that issues an "ADA compliant" badge. Instead, it's a set of 78 success criteria across four principles: perceivable, operable, understandable, robust. For an e-commerce store, the most frequently violated criteria are:</p>
+
+<p><strong>Missing alt text on product images.</strong> Screen readers can't describe a product photo without descriptive alternative text. A Shopify store with 800 products and zero alt tags is a lawsuit waiting to happen.</p>
+
+<p><strong>Insufficient color contrast.</strong> WCAG requires a contrast ratio of at least 4.5:1 for normal text. Light gray text on white backgrounds—common in minimalist D2C design—fails this test.</p>
+
+<p><strong>Keyboard navigation failures.</strong> Users who can't use a mouse must be able to navigate using only a keyboard. If your dropdown menu, cart drawer, or product quick-view modal doesn't work with Tab and Enter keys, it's non-compliant.</p>
+
+<p><strong>Form labels missing or improperly associated.</strong> Every input field needs a programmatically associated label. Placeholder text alone doesn't count. Screen readers won't announce what the field is for.</p>
+
+<p><strong>No skip navigation link.</strong> Users should be able to skip repetitive navigation and jump straight to main content. Most Shopify themes don't include this by default.</p>
+
+<p>These aren't theoretical edge cases. They're the top five issues cited in demand letters sent to Shopify and WooCommerce stores in 2023, according to data from accessibility law firm Carlson Lynch.</p>
+
+<h2>The Settlement Economics That Make You a Target</h2>
+
+<p>Plaintiff firms operate on volume. A single firm can send 400+ demand letters per year. The math is simple: if 60% of recipients settle for $15,000 to $25,000, and legal costs per case are minimal due to templated filings, the model prints money.</p>
+
+<p>Settlements break down into three tiers. Demand letters for sites with under $1M in revenue typically ask for $12,000 to $18,000 plus remediation costs. Sites doing $1M to $5M see demands in the $20,000 to $35,000 range. Above $5M, or if the case goes to court, numbers climb into six figures. In 2022, Domino's Pizza lost an appeal to the Supreme Court and ultimately settled for an undisclosed amount after years of litigation. Legal fees alone exceeded $400,000.</p>
+
+<p>Most D2C brands settle. Fighting costs more, and there's no guarantee of winning. The legal precedent is messy. The Ninth Circuit ruled in Robles v. Domino's that the ADA applies to websites. The Second Circuit hasn't issued a definitive ruling, but district courts in New York—where most lawsuits are filed—overwhelmingly side with plaintiffs.</p>
+
+<h2>What Compliance Actually Requires (No Lawyers, No $50K Audits)</h2>
+
+<p>Forget the scare-tactic sales pitches. You don't need a $50,000 manual audit from a CPACC-certified consultant before you fix anything. The work breaks into three layers.</p>
+
+<p><strong>Layer one: automated fixes you can do today.</strong> Run an automated accessibility scanner. Tools like WAVE, Axe, or a specialized e-commerce scanner will flag 30-40% of WCAG issues instantly. Add alt text to product images. Fix color contrast on buttons and body text. Ensure all form inputs have labels. Most of these fixes take minutes per issue, not hours.</p>
+
+<p><strong>Layer two: navigation and interaction remediation.</strong> Test your site using only a keyboard. Can you add a product to cart, open the menu, complete checkout, and submit a contact form without touching a mouse? If no, you have work to do. This usually requires developer involvement but isn't monumentally expensive. Budget $1,500 to $4,000 depending on theme complexity.</p>
+
+<p><strong>Layer three: ongoing monitoring and content governance.</strong> Compliance isn't one-and-done. Every new product upload, landing page, or blog post can introduce new violations. Set up automated scans on a schedule. Train your team to add alt text and check contrast before publishing.</p>
+
+<p>The idea that accessibility is prohibitively expensive is fiction spread by agencies with $30K retainers. A mid-sized Shopify store can achieve functional WCAG 2.1 AA compliance for under $6,000 in total costs if you prioritize the high-risk issues first.</p>
+
+<h2>Why Overlay Widgets Are Legal Liability Theater</h2>
+
+<p>Accessibility overlay widgets—those one-line scripts that promise instant compliance—are the homeopathy of web accessibility. Companies like AudioEye and AccessiBe sell them aggressively to scared store owners. They don't work. Worse, they create a false sense of security.</p>
+
+<p>In 2021, over 400 accessibility advocates and developers signed the Overlay Fact Sheet, a public document explaining why overlays fail. Overlays can't fix missing alt text. They can't repair broken keyboard navigation. They can't restructure poorly coded HTML. What they do is add a toolbar that lets users adjust font size and color contrast on the client side—features already built into every browser.</p>
+
+<p>More damning: stores using overlays still get sued at the same rate as stores without them. A 2023 analysis by law firm Seyfarth Shaw found that 15% of ADA website lawsuits filed in New York federal court named defendants who had an accessibility overlay installed. Judges don't care. Plaintiff lawyers don't care. The overlay is legal theater.</p>
+
+<h2>How Plaintiff Firms Actually Find You</h2>
+
+<p>Plaintiff firms use crawlers that scrape e-commerce platforms looking for common violations. They prioritize Shopify and WooCommerce because the platform markers are easy to detect. High-traffic stores with clear revenue signals—robust product catalogs, active Instagram links, media mentions—move to the top of the list.</p>
+
+<p>Once a target is identified, the firm runs a quick manual check to confirm violations, then files or sends a demand letter. Many firms don't even visit the site manually first. The initial demand is based purely on automated scan results. This is why you see demand letters that cite violations on pages that don't exist or reference outdated site elements.</p>
+
+<p>The trigger isn't a complaint from an actual customer with a disability. It's algorithmic target selection optimized for settlement velocity.</p>
+
+<h2>What to Do Right Now</h2>
+
+<p>If you haven't scanned your store, do it today. Waiting doesn't reduce risk. It compounds it. The longer your site has violations, the stronger the plaintiff's case that you've been knowingly non-compliant.</p>
+
+<p>Start with an automated scan to identify the obvious issues. Fix missing alt text, color contrast failures, and form label problems first. These are the lowest-hanging fruit and the most frequently cited violations. Then test keyboard navigation and remedy any dead ends. If you're on Shopify, check whether your theme includes a skip-to-content link and focus indicators on interactive elements.</p>
+
+<p>Document everything. Keep records of when you ran scans, what you fixed, and when. If you do receive a demand letter, evidence of good-faith remediation efforts strengthens your negotiating position.</p>
+
+<p>Don't assume your developer or theme builder handled accessibility. They almost certainly didn't. Accessibility is not a default consideration in most e-commerce design workflows. Unless you specifically paid for WCAG compliance work, assume your site has issues.</p>
+
+<section aria-label="FAQ">
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can I get sued if my revenue is under $500K?</h3>
+<p>Yes. There's no revenue threshold below which you're safe. Plaintiff firms have sued stores doing under $200K in annual revenue. Smaller stores often settle faster because legal defense costs exceed settlement amounts.</p>
+
+<h3>Does installing an accessibility widget protect me legally?</h3>
+<p>No. Overlay widgets do not prevent lawsuits and are not recognized by courts as proof of compliance. Stores with overlays installed are sued at comparable rates to stores without them.</p>
+
+<h3>How long does it take to fix a non-compliant Shopify store?</h3>
+<p>For a store with 200-500 products, fixing high-priority issues typically takes 15-30 hours of combined work between the store owner and a developer. Most stores can reach functional compliance within two weeks.</p>
+
+<h3>Is WCAG 2.1 Level AA a legal requirement?</h3>
+<p>It's not codified in federal law, but courts consistently reference WCAG 2.1 Level AA as the standard for website accessibility. Meeting this standard is the strongest defense against ADA claims.</p>
+
+<h3>What happens if I ignore a demand letter?</h3>
+<p>Ignoring a demand letter typically results in a federal lawsuit. Once filed, you'll need to hire an attorney, and legal costs will quickly exceed what the initial settlement demand requested. Most defendants who ignore demands end up settling for more after litigation begins.</p>
+</section>
+
+<p>Scan your Shopify store for free and get a prioritized list of accessibility issues in under 60 seconds at <a href="https://altorlab.app">altorlab.app</a>. No signup required.</p>
+</article>
+```
+</article>
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; color: #888; font-size: 0.85rem;">
+Published March 25, 2026 · Auto-generated from search data
+</footer>
+</body>
+</html>
