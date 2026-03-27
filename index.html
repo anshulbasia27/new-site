@@ -40,13 +40,135 @@
       }
     </script>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is my Shopify store ADA compliant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most Shopify stores are not automatically ADA compliant just because they use Shopify. Compliance depends on your theme, apps, custom code, product media, navigation, forms, and checkout experience meeting WCAG requirements. A real audit should check the live storefront, not just the platform."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does an ADA compliance lawsuit cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An ADA website lawsuit can cost far more than remediation alone because brands may face legal fees, settlement costs, emergency fixes, consultant time, and internal team distraction. The cheaper path is usually to find and fix WCAG issues before demand letters arrive."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is WCAG 2.2?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WCAG 2.2 is the latest Web Content Accessibility Guidelines update that adds new success criteria for focus appearance, drag interactions, target size, consistent help, and authentication flows. For e-commerce teams, it is the practical checklist used to reduce accessibility risk on modern storefronts."
+            }
+          }
+        ]
+      }
+    </script>
+
     <title>AltorLab — ADA Compliance Scanning for D2C Brands</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      .seo-static {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px 56px;
+        color: #cbd5e1;
+        font: 15px/1.7 "IBM Plex Sans", system-ui, sans-serif;
+      }
+
+      .seo-static h2 {
+        margin: 0 0 12px;
+        color: #f8fafc;
+      }
+
+      .seo-static p {
+        margin: 0 0 12px;
+      }
+
+      .seo-static a {
+        color: #7dd3fc;
+        text-decoration: none;
+      }
+
+      .seo-static ul {
+        margin: 0;
+        padding-left: 18px;
+        columns: 2;
+        column-gap: 28px;
+      }
+
+      .seo-static li {
+        margin-bottom: 8px;
+      }
+
+      .seo-static dl {
+        margin: 0;
+        display: grid;
+        gap: 12px;
+      }
+
+      .seo-static dt {
+        font-weight: 700;
+        color: #f8fafc;
+      }
+
+      .seo-static dd {
+        margin: 4px 0 0;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <section class="seo-static" aria-label="Free ADA compliance resources">
+      <h2>Free Resources</h2>
+      <p>Google and AI assistants can discover these ADA compliance guides directly from the homepage. Browse lawsuit data, WCAG explainers, and platform-specific accessibility checklists for Shopify and WooCommerce teams.</p>
+      <nav aria-label="Crawler-visible blog links">
+        <p><a href="/blog/">Browse the full AltorLab ADA compliance blog</a></p>
+        <ul>
+          <li><a href="/blog/ada-lawsuits-2026.html">ADA Compliance Lawsuits 2026 — What D2C Brands Need to Know</a></li>
+          <li><a href="/blog/ada-website-lawsuit-statistics-2026.html">ADA Website Lawsuit Stats 2026: What Online Stores Face</a></li>
+          <li><a href="/blog/fashion-nova-settlement.html">Fashion Nova's $5.15M ADA Settlement — Lessons for D2C Brands</a></li>
+          <li><a href="/blog/what-happens-ignore-ada.html">What Happens If You Ignore ADA Compliance?</a></li>
+          <li><a href="/blog/ada-compliance-cost.html">ADA Compliance Cost — How Much Does It Really Cost?</a></li>
+          <li><a href="/blog/shopify-ada-compliance.html">Is Your Shopify Store ADA Compliant? Here's How to Check</a></li>
+          <li><a href="/blog/woocommerce-accessibility.html">WooCommerce Accessibility — Complete Compliance Guide</a></li>
+          <li><a href="/blog/ecommerce-accessibility-compliance.html">E-Commerce Accessibility Compliance — The Complete 2026 Guide</a></li>
+          <li><a href="/blog/wcag-2-2-changes.html">WCAG 2.2 vs WCAG 2.1 — What Changed and What It Means</a></li>
+          <li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li>
+          <li><a href="/blog/accessibe-alternative.html">accessiBe Alternative — Why Overlays Aren't Enough</a></li>
+          <li><a href="/blog/ada-wcag-compliance-guide-ecommerce.html">ADA/WCAG Compliance: What Online Stores Must Know</a></li>
+          <li><a href="/blog/ada-wcag-compliance-guide.html">ADA/WCAG Compliance Guide: Make Your Site Accessible</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="seo-static" aria-label="ADA compliance FAQ">
+      <h2>ADA compliance FAQ</h2>
+      <dl>
+        <div>
+          <dt>Is my Shopify store ADA compliant?</dt>
+          <dd>Not automatically. Shopify is only the platform. Your live theme, apps, product media, custom components, navigation, forms, and checkout experience still need to meet WCAG requirements.</dd>
+        </div>
+        <div>
+          <dt>How much does an ADA compliance lawsuit cost?</dt>
+          <dd>The full cost usually includes legal fees, settlement pressure, emergency remediation, consultant time, and internal distraction. For most brands, proactive WCAG fixes cost less than reacting after a demand letter.</dd>
+        </div>
+        <div>
+          <dt>What is WCAG 2.2?</dt>
+          <dd>WCAG 2.2 is the newest accessibility guideline update covering areas like focus visibility, drag-and-drop interactions, target size, and authentication flows. It is the practical standard many teams use to evaluate storefront accessibility now.</dd>
+        </div>
+      </dl>
+    </section>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
