@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Audit Your Website for ADA & WCAG Accessibility</title>
+<meta name="description" content="Learn practical steps to check your site for accessibility issues. Find barriers, fix WCAG violations, and ensure ADA compliance for all users.">
+<link rel="canonical" href="https://altorlab.app/blog/how-to-audit-website-accessibility">
+<meta property="og:title" content="How to Audit Your Website for ADA & WCAG Accessibility">
+<meta property="og:description" content="Learn practical steps to check your site for accessibility issues. Find barriers, fix WCAG violations, and ensure ADA compliance for all users.">
+<meta property="og:url" content="https://altorlab.app/blog/how-to-audit-website-accessibility">
+<meta property="og:type" content="article">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Audit Your Website for ADA & WCAG Accessibility",
+  "author": {"@type": "Organization", "name": "AltorLab"},
+  "publisher": {"@type": "Organization", "name": "AltorLab"},
+  "datePublished": "2026-03-27",
+  "url": "https://altorlab.app/blog/how-to-audit-website-accessibility"
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 2rem; line-height: 1.3; color: #f5f5f5; }
+h2 { font-size: 1.5rem; color: #f5f5f5; margin-top: 2rem; }
+h3 { font-size: 1.2rem; color: #d4a574; }
+a { color: #d4a574; }
+pre { background: #1a1a1a; padding: 16px; border-radius: 8px; overflow-x: auto; }
+code { font-family: 'SF Mono', monospace; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav><a href="/">← Home</a> · <a href="/blog/">Blog</a></nav>
+<article>
+<h1>How to Audit Your Website for Accessibility (Before a Demand Letter Arrives)</h1>
+
+<p>In March 2024, eyewear brand Warby Parker settled an ADA web accessibility lawsuit for $1.5 million. The plaintiff was a blind customer who couldn't complete a purchase using a screen reader. Warby Parker has a full legal team and a multi-million dollar tech stack. If they missed it, you probably are too.</p>
+
+<p>The thesis here is simple: most D2C brands don't need a full WCAG conformance report. What you need is a fast, defensible audit that catches the three violation patterns that trigger 80% of demand letters—and you need it before a plaintiff's law firm runs their own scan of your Shopify store.</p>
+
+<h2>Why Audits Matter More Than Fixes Right Now</h2>
+
+<p>Between January and October 2024, over 4,600 ADA Title III lawsuits were filed in federal court, nearly all targeting websites. The median settlement for an e-commerce site is $15,000–$40,000, plus plaintiff attorney fees that run another $10,000–$25,000. Law firms like Mizrahi Kroub LLP and Gottlieb & Associates generate these cases at scale using automated scanners to identify non-compliant sites, then recruit plaintiffs.</p>
+
+<p>Here's the pattern: they scan your product pages for missing alt text, test your checkout flow for keyboard traps, and probe your forms for unlabeled fields. If they find violations, you get a demand letter. At that point, fixing the issues doesn't make the lawsuit go away—it just reduces your settlement leverage.</p>
+
+<p>An audit gives you two things a reactive fix doesn't: documentation that you're actively working toward compliance, and a prioritized roadmap so you're not fixing cosmetic issues while ignoring the stuff that actually triggers legal action.</p>
+
+<h2>The Three Violation Clusters That Trigger Demand Letters</h2>
+
+<p>Not all accessibility issues carry equal legal risk. Plaintiff firms focus on barriers that prevent a transaction, because those meet the ADA's "full and equal enjoyment" standard. Here's where to start your audit:</p>
+
+<p><strong>Image alt text on product pages and CTAs.</strong> This is the single most common violation in e-commerce lawsuits. If a blind user can't distinguish between product images—or if a "Buy Now" button is just an unlabeled graphic—that's a transactional barrier. Your audit should flag every <code>&lt;img&gt;</code> tag without an alt attribute, and every decorative image that isn't marked <code>alt=""</code>. Decorative images with descriptive alt text create noise for screen readers; missing alt text on functional images blocks purchases.</p>
+
+<p><strong>Keyboard navigation and focus traps in checkout.</strong> Screen reader users navigate with keyboards, not mice. If your mega-menu, size selector, or checkout modal can't be reached with Tab, Enter, and Arrow keys, that's a violation. Worse: if focus gets trapped inside a popup with no Escape key exit, users can't complete a purchase. Test this yourself—unplug your mouse and try to check out using only your keyboard. Most Shopify themes fail at the cart drawer.</p>
+
+<p><strong>Form labels and error messaging.</strong> Every input field needs a programmatically associated label, not just placeholder text. When a screen reader lands on your email field, it should announce "Email address, edit text," not "edit text" alone. Error messages must be tied to the field that failed and announced to assistive tech. "Please fix errors above" doesn't tell a blind user which field is wrong or why. Your audit should check that every form field has a <code>&lt;label&gt;</code> or <code>aria-label</code>, and that error states use <code>aria-describedby</code> or <code>aria-live</code> regions.</p>
+
+<h2>How to Actually Run the Audit</h2>
+
+<p>Manual testing is the gold standard, but it's slow and requires expertise. Automated scanners catch about 30–40% of WCAG violations—but that 30% includes the high-frequency issues that show up in lawsuits. A practical audit uses both.</p>
+
+<p>Start with an automated scan. Tools like WAVE, Axe DevTools, or a dedicated compliance scanner will crawl your site and flag missing alt text, color contrast failures, unlabeled forms, and HTML structure errors. Run the scan on your homepage, at least five product pages, your cart, and your full checkout flow. Don't just scan the homepage—plaintiff firms don't.</p>
+
+<p>Next, do targeted manual checks on the violations that matter most. Open your product page and turn on a screen reader (NVDA on Windows is free, VoiceOver ships with macOS). Navigate through your "Add to Cart" flow using only the keyboard. If you can't select a size, adjust quantity, or submit the form without a mouse, you've found a barrier. Check that all interactive elements announce their purpose and state.</p>
+
+<p>Pay special attention to dynamic content. Does your "item added to cart" toast notification get announced to screen readers, or does it silently appear and vanish? When you open your mobile menu, does focus move into it, or does the user tab through invisible links? These are the interaction patterns that automated tools miss but plaintiff attorneys test manually.</p>
+
+<h3>What to Do With the Results</h3>
+
+<p>Your audit report will spit out a long list of issues tagged by WCAG success criterion (1.1.1, 2.4.3, etc.). Ignore the severity ratings for a moment and sort by volume and user impact. Fixing 200 color contrast fails on your blog is less urgent than fixing 12 unlabeled form fields in checkout.</p>
+
+<p>Create a remediation plan in tiers. <strong>Tier 1:</strong> Transactional barriers—anything blocking product discovery, cart, or checkout. These get fixed in the next sprint. <strong>Tier 2:</strong> Navigation and content access—missing skip links, unclear heading structure, auto-playing carousels. Fix within 30–60 days. <strong>Tier 3:</strong> Polish issues—redundant links, minor contrast fails on non-essential elements. Fix as you touch those components anyway.</p>
+
+<p>Document the plan with dates and owners. If you do receive a demand letter, your lawyer can show the court that you identified issues on [date], prioritized them reasonably, and began remediation before the complaint. That's not a full defense, but it significantly changes settlement posture.</p>
+
+<h2>Why One Audit Isn't Enough</h2>
+
+<p>Accessibility isn't a one-time fix. Every time you launch a new product page template, install a Shopify app, or update your theme, you risk introducing new violations. Apps are a particular problem—many inject modals, chat widgets, or size guides that completely bypass your accessibility work. The app developer controls the code, and most don't test with screen readers.</p>
+
+<p>Brands with the tightest compliance posture run quarterly scans and test every new feature before it goes live. That's the standard a court would consider "reasonable effort" under the ADA. Realistically, most D2C brands should audit after major site changes and at least every six months.</p>
+
+<p>Set a recurring calendar reminder. Make accessibility part of your QA checklist alongside browser testing and mobile responsiveness. The legal risk is only going higher—2024 is on track to set a new record for filings, and plaintiff firms are expanding beyond fashion and retail into supplements, home goods, and beauty.</p>
+
+<section aria-label="FAQ">
+<h2>Frequently Asked Questions</h2>
+
+<h3>Can I just install an accessibility widget instead of auditing?</h3>
+<p>No. Overlay widgets (the ones that add a floating accessibility menu to your site) don't prevent lawsuits and in some cases have made brands <em>more</em> likely to be sued. They don't fix underlying code issues, and plaintiff attorneys know it. An audit finds the actual violations; a widget applies a cosmetic layer over them.</p>
+
+<h3>How much does a professional accessibility audit cost?</h3>
+<p>A manual WCAG 2.1 AA audit by a certified accessibility consultant typically costs $3,000–$8,000 for a standard e-commerce site, depending on page count and complexity. Automated scans range from free (open-source tools) to $50–$300/month for commercial platforms with monitoring. For most Shopify stores, a hybrid approach—automated scanning plus targeted manual testing on checkout—is the most cost-effective starting point.</p>
+
+<h3>What's the difference between WCAG A, AA, and AAA?</h3>
+<p>WCAG (Web Content Accessibility Guidelines) has three conformance levels. Level A is the minimum—things like alt text and keyboard access. Level AA is the standard most courts reference in ADA cases and includes color contrast and clear navigation. Level AAA is the highest bar and includes requirements like sign language interpretation; almost no commercial sites meet it, and it's not expected in litigation. Aim for AA.</p>
+
+<h3>Do I need to audit my email campaigns and PDFs too?</h3>
+<p>Yes, eventually. Courts have ruled that promotional emails and downloadable catalogs are within ADA scope if they're part of how customers access goods and services. That said, 95% of current lawsuits target website product and checkout flows. Audit those first, then extend to emails and documents once your site is defensible.</p>
+</section>
+
+<p>Before you make another site change, run a baseline audit. Know where you stand, fix what blocks transactions, and document the work. <a href="https://altorlab.app">Scan your store free at AltorLab</a>—it takes two minutes and flags the violations that actually show up in demand letters.</p>
+</article>
+<footer style="margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; color: #888; font-size: 0.85rem;">
+Published March 27, 2026 · Auto-generated from search data
+</footer>
+</body>
+</html>
