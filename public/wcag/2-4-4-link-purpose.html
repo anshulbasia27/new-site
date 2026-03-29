@@ -1,0 +1,105 @@
+        <!DOCTYPE html>
+        <html lang="en-US">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="geo.region" content="US" />
+          <title>WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27;</title>
+          <meta name="description" content="WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27; for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <link rel="canonical" href="https://altorlab.app/wcag/2-4-4-link-purpose.html" />
+          <link rel="alternate" hreflang="en-us" href="https://altorlab.app/wcag/2-4-4-link-purpose.html" />
+          <meta property="og:title" content="WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27;" />
+          <meta property="og:description" content="WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27; for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://altorlab.app/wcag/2-4-4-link-purpose.html" />
+          <meta property="og:image" content="https://altorlab.app/og-image.svg" />
+          <meta property="og:locale" content="en_US" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27;" />
+          <meta name="twitter:description" content="WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27; for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <meta name="twitter:image" content="https://altorlab.app/og-image.svg" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+          <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "WCAG 2.4.4 Link Purpose — No More 'Click Here'", "author": {"@type": "Organization", "name": "AltorLab"}, "publisher": {"@type": "Organization", "name": "AltorLab"}, "datePublished": "2026-03-29", "dateModified": "2026-03-29", "mainEntityOfPage": "https://altorlab.app/wcag/2-4-4-link-purpose.html", "image": "https://altorlab.app/og-image.svg"}</script>
+          <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Are 'shop now' links always wrong?", "acceptedAnswer": {"@type": "Answer", "text": "Not always, but repeated generic links on a page often become ambiguous for assistive technology users."}}, {"@type": "Question", "name": "What about buttons?", "acceptedAnswer": {"@type": "Answer", "text": "The same principle applies. Buttons also need names that clearly describe their purpose."}}, {"@type": "Question", "name": "Where do stores fail most often?", "acceptedAnswer": {"@type": "Answer", "text": "Cards, hero banners, blog promos, and image-only calls to action are common problem areas."}}]}</script>
+          <style>
+            body{margin:0;background:#080b12;color:#e5e7eb;font-family:'IBM Plex Sans',sans-serif;line-height:1.75}
+            main{max-width:960px;margin:0 auto;padding:40px 20px 84px}
+            h1,h2,h3{color:#f8fafc;line-height:1.22}
+            h1{font-size:clamp(2rem,4vw,3.2rem);margin:10px 0 18px}
+            h2{margin-top:42px}
+            a{color:#7dd3fc;text-decoration:none}
+            p,li{color:#dbe4ee}
+            .eyebrow{font-family:'IBM Plex Mono',monospace;color:#93c5fd;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+            .cta{display:inline-block;margin:18px 0 10px;background:#22d3ee;color:#082f49;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+            .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.92rem;color:#94a3b8;margin-bottom:18px}
+            .breadcrumbs span{color:#94a3b8}
+            .card,.callout{background:#0f172a;border:1px solid #1f2937;border-radius:14px;padding:18px}
+            .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+            .checklist{padding-left:22px}
+            .checklist li{margin-bottom:10px}
+            ul,ol{padding-left:22px}
+            table{width:100%;border-collapse:collapse;background:#0f172a;border:1px solid #1f2937;border-radius:12px;overflow:hidden}
+            th,td{border:1px solid #1f2937;padding:12px;text-align:left;vertical-align:top}
+            th{color:#f8fafc;background:#111827}
+            pre{background:#020617;border:1px solid #1f2937;border-radius:12px;padding:16px;overflow:auto}
+            code{font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#c4f1ff}
+            .faq{display:grid;gap:14px}
+            .faq-item{background:#0f172a;border:1px solid #1f2937;border-radius:12px;padding:16px}
+            .links{columns:2;column-gap:28px}
+            .links li{break-inside:avoid;margin-bottom:8px}
+            .lede{font-size:1.08rem;color:#dbeafe}
+            @media (max-width:720px){.links{columns:1}}
+          </style>
+        </head>
+        <body>
+          <main>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="https://altorlab.app">Home</a><span>/</span><a href="https://altorlab.app/wcag/">WCAG</a><span>/</span><span aria-current="page">2-4-4-link-purpose</span></nav>
+            <p class="eyebrow">WCAG for Ecommerce</p>
+            <h1>WCAG 2.4.4 Link Purpose — No More &#x27;Click Here&#x27;</h1>
+            <div class="lede"><p>Users should understand where a link goes or what it does from the link text or its context.</p><p>For D2C teams, this is not just a standards question. It is a revenue-path question. When a WCAG criterion fails on a product page, filter interface, or checkout form, it creates both customer friction and legal exposure.</p></div>
+            <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+
+<section>
+  <h2>What this means in plain English</h2>
+  <p>Users should understand where a link goes or what it does from the link text or its context.</p>
+  <p>On ecommerce sites, this criterion matters because shoppers are rarely reading one clean article. They are evaluating products, interacting with filters, switching variants, reviewing shipping promises, and moving through forms under time pressure. When the underlying accessibility rule breaks, the buying journey breaks with it.</p>
+</section>
+<section>
+  <h2>Why it matters for ecommerce</h2>
+  <div class="grid"><div class="card"><p><strong>Product cards</strong></p></div><div class="card"><p><strong>blog CTAs</strong></p></div><div class="card"><p><strong>promo banners</strong></p></div><div class="card"><p><strong>policy links</strong></p></div></div>
+  <p>ADA complaints against online stores usually do not focus on abstract theory. They focus on failed tasks: a user cannot understand a product image, cannot interpret a discount, cannot complete a form, or cannot recover from an error. That is why even one overlooked success criterion can create outsized legal and commercial risk.</p>
+</section>
+<section>
+  <h2>How to check if you comply</h2>
+  <h3>Manual test</h3>
+  <p>List links out of context or use a screen reader links menu. If repeated 'shop now' or 'learn more' links become meaningless, the page fails the spirit of this criterion.</p>
+  <h3>Automated test</h3>
+  <p>Some tools flag ambiguous link text patterns, but manual review is still needed to judge context and repetition.</p>
+</section>
+<section>
+  <h2>How to fix violations</h2>
+  <p>Write link text that names the destination or action, especially on repeated cards, promos, and editorial modules.</p>
+  <pre><code>&lt;a href=&quot;/products/collagen&quot;&gt;View collagen supplement details&lt;/a&gt;</code></pre>
+  <p>The best fix is usually at the component level. If the problem lives in a reusable product card, accordion, swatch selector, or form field, repair the shared component once instead of chasing the same violation page by page.</p>
+</section>
+<section>
+  <h2>Common mistakes stores make</h2>
+  <ul><li>Repeated 'shop now' links on product grids</li><li>icon-only links with no accessible name</li><li>banner links that only say 'learn more'</li><li>generic footer links</li></ul>
+  <p>These mistakes recur because ecommerce teams optimize for speed, visual merchandising, and third-party integrations. Accessibility gets treated as cleanup work instead of release quality, so the same defect reappears with every new campaign or theme update.</p>
+</section>
+<section class="callout">
+  <h2>Why this matters legally</h2>
+  <p>In 2025, <strong>8,667 ADA lawsuits</strong> were filed across federal and state courts. Plaintiff firms do not need every WCAG failure to build pressure. They only need enough reproducible barriers to show that disabled shoppers cannot access the same buying journey. That makes criteria like WCAG 2.4.4 Link Purpose — No More 'Click Here' commercially and legally material, not academic.</p>
+</section>
+<section>
+  <h2>Related reading</h2>
+  <ul class="links"><li><a href="/wcag/">Browse all WCAG ecommerce guides</a></li><li><a href="/blog/ecommerce-accessibility-compliance.html">E-Commerce Accessibility Compliance — The Complete 2026 Guide</a></li><li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li><li><a href="/blog/how-to-audit-website-accessibility.html">How to Audit Website Accessibility</a></li></ul>
+</section>
+
+            <section><h2>FAQs</h2><div class="faq"><div class="faq-item"><h3>Are 'shop now' links always wrong?</h3><p>Not always, but repeated generic links on a page often become ambiguous for assistive technology users.</p></div><div class="faq-item"><h3>What about buttons?</h3><p>The same principle applies. Buttons also need names that clearly describe their purpose.</p></div><div class="faq-item"><h3>Where do stores fail most often?</h3><p>Cards, hero banners, blog promos, and image-only calls to action are common problem areas.</p></div></div></section>
+            <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+          </main>
+        </body>
+        </html>

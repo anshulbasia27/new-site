@@ -1,0 +1,106 @@
+        <!DOCTYPE html>
+        <html lang="en-US">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="geo.region" content="US" />
+          <title>WCAG 1.1.1 Non-Text Content — Alt Text for Images</title>
+          <meta name="description" content="WCAG 1.1.1 Non-Text Content — Alt Text for Images for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <link rel="canonical" href="https://altorlab.app/wcag/1-1-1-non-text-content.html" />
+          <link rel="alternate" hreflang="en-us" href="https://altorlab.app/wcag/1-1-1-non-text-content.html" />
+          <meta property="og:title" content="WCAG 1.1.1 Non-Text Content — Alt Text for Images" />
+          <meta property="og:description" content="WCAG 1.1.1 Non-Text Content — Alt Text for Images for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://altorlab.app/wcag/1-1-1-non-text-content.html" />
+          <meta property="og:image" content="https://altorlab.app/og-image.svg" />
+          <meta property="og:locale" content="en_US" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="WCAG 1.1.1 Non-Text Content — Alt Text for Images" />
+          <meta name="twitter:description" content="WCAG 1.1.1 Non-Text Content — Alt Text for Images for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <meta name="twitter:image" content="https://altorlab.app/og-image.svg" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+          <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "WCAG 1.1.1 Non-Text Content — Alt Text for Images", "author": {"@type": "Organization", "name": "AltorLab"}, "publisher": {"@type": "Organization", "name": "AltorLab"}, "datePublished": "2026-03-29", "dateModified": "2026-03-29", "mainEntityOfPage": "https://altorlab.app/wcag/1-1-1-non-text-content.html", "image": "https://altorlab.app/og-image.svg"}</script>
+          <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does every ecommerce image need alt text?", "acceptedAnswer": {"@type": "Answer", "text": "Informative images need meaningful alt text; purely decorative images should usually have empty alt text so assistive tech can ignore them."}}, {"@type": "Question", "name": "Can AI-generated alt text solve WCAG 1.1.1 by itself?", "acceptedAnswer": {"@type": "Answer", "text": "No. Generated text can help with drafting, but humans still need to verify accuracy, relevance, and merchandising context."}}, {"@type": "Question", "name": "What product images are highest risk?", "acceptedAnswer": {"@type": "Answer", "text": "Primary product photos, swatches, badges, icons, and any image that changes buying decisions are the first places to fix."}}]}</script>
+          <style>
+            body{margin:0;background:#080b12;color:#e5e7eb;font-family:'IBM Plex Sans',sans-serif;line-height:1.75}
+            main{max-width:960px;margin:0 auto;padding:40px 20px 84px}
+            h1,h2,h3{color:#f8fafc;line-height:1.22}
+            h1{font-size:clamp(2rem,4vw,3.2rem);margin:10px 0 18px}
+            h2{margin-top:42px}
+            a{color:#7dd3fc;text-decoration:none}
+            p,li{color:#dbe4ee}
+            .eyebrow{font-family:'IBM Plex Mono',monospace;color:#93c5fd;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+            .cta{display:inline-block;margin:18px 0 10px;background:#22d3ee;color:#082f49;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+            .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.92rem;color:#94a3b8;margin-bottom:18px}
+            .breadcrumbs span{color:#94a3b8}
+            .card,.callout{background:#0f172a;border:1px solid #1f2937;border-radius:14px;padding:18px}
+            .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+            .checklist{padding-left:22px}
+            .checklist li{margin-bottom:10px}
+            ul,ol{padding-left:22px}
+            table{width:100%;border-collapse:collapse;background:#0f172a;border:1px solid #1f2937;border-radius:12px;overflow:hidden}
+            th,td{border:1px solid #1f2937;padding:12px;text-align:left;vertical-align:top}
+            th{color:#f8fafc;background:#111827}
+            pre{background:#020617;border:1px solid #1f2937;border-radius:12px;padding:16px;overflow:auto}
+            code{font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#c4f1ff}
+            .faq{display:grid;gap:14px}
+            .faq-item{background:#0f172a;border:1px solid #1f2937;border-radius:12px;padding:16px}
+            .links{columns:2;column-gap:28px}
+            .links li{break-inside:avoid;margin-bottom:8px}
+            .lede{font-size:1.08rem;color:#dbeafe}
+            @media (max-width:720px){.links{columns:1}}
+          </style>
+        </head>
+        <body>
+          <main>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="https://altorlab.app">Home</a><span>/</span><a href="https://altorlab.app/wcag/">WCAG</a><span>/</span><span aria-current="page">1-1-1-non-text-content</span></nav>
+            <p class="eyebrow">WCAG for Ecommerce</p>
+            <h1>WCAG 1.1.1 Non-Text Content — Alt Text for Images</h1>
+            <div class="lede"><p>If an image, icon, infographic, or product visual communicates meaning, shoppers who cannot see it need an equivalent text alternative.</p><p>For D2C teams, this is not just a standards question. It is a revenue-path question. When a WCAG criterion fails on a product page, filter interface, or checkout form, it creates both customer friction and legal exposure.</p></div>
+            <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+
+        <section>
+          <h2>What this means in plain English</h2>
+          <p>If an image, icon, infographic, or product visual communicates meaning, shoppers who cannot see it need an equivalent text alternative.</p>
+          <p>On ecommerce sites, this criterion matters because shoppers are rarely reading one clean article. They are evaluating products, interacting with filters, switching variants, reviewing shipping promises, and moving through forms under time pressure. When the underlying accessibility rule breaks, the buying journey breaks with it.</p>
+        </section>
+        <section>
+          <h2>Why it matters for ecommerce</h2>
+          <div class="grid"><div class="card"><p><strong>Product galleries</strong></p></div><div class="card"><p><strong>swatch thumbnails</strong></p></div><div class="card"><p><strong>lifestyle imagery with promotional text</strong></p></div><div class="card"><p><strong>payment icons and trust badges</strong></p></div></div>
+          <p>ADA complaints against online stores usually do not focus on abstract theory. They focus on failed tasks: a user cannot understand a product image, cannot interpret a discount, cannot complete a form, or cannot recover from an error. That is why even one overlooked success criterion can create outsized legal and commercial risk.</p>
+        </section>
+        <section>
+          <h2>How to check if you comply</h2>
+          <h3>Manual test</h3>
+          <p>Turn on a screen reader and move through product listings, product detail pages, and homepage hero modules. Listen for whether images are skipped, read as raw filenames, or announced with useful context.</p>
+          <h3>Automated test</h3>
+          <p>Use axe, Lighthouse, or WAVE to flag missing alt attributes, but manually judge quality because a meaningless alt attribute can still pass tooling.</p>
+        </section>
+        <section>
+          <h2>How to fix violations</h2>
+          <p>Write concise alt text for informative images, leave decorative images empty with alt="", and move text out of graphics whenever possible.</p>
+          <pre><code>&lt;img src=&quot;serum-bottle.jpg&quot; alt=&quot;Vitamin C serum bottle with pump applicator&quot; /&gt;
+&lt;img src=&quot;divider.svg&quot; alt=&quot;&quot; /&gt;</code></pre>
+          <p>The best fix is usually at the component level. If the problem lives in a reusable product card, accordion, swatch selector, or form field, repair the shared component once instead of chasing the same violation page by page.</p>
+        </section>
+        <section>
+          <h2>Common mistakes stores make</h2>
+          <ul><li>Using SKU names as alt text</li><li>Repeating the page headline in every image alt attribute</li><li>Leaving button icons unnamed</li><li>Treating text baked into images as decorative</li></ul>
+          <p>These mistakes recur because ecommerce teams optimize for speed, visual merchandising, and third-party integrations. Accessibility gets treated as cleanup work instead of release quality, so the same defect reappears with every new campaign or theme update.</p>
+        </section>
+        <section class="callout">
+          <h2>Why this matters legally</h2>
+          <p>In 2025, <strong>8,667 ADA lawsuits</strong> were filed across federal and state courts. Plaintiff firms do not need every WCAG failure to build pressure. They only need enough reproducible barriers to show that disabled shoppers cannot access the same buying journey. That makes criteria like WCAG 1.1.1 Non-Text Content — Alt Text for Images commercially and legally material, not academic.</p>
+        </section>
+        <section>
+          <h2>Related reading</h2>
+          <ul class="links"><li><a href="/wcag/">Browse all WCAG ecommerce guides</a></li><li><a href="/blog/ecommerce-accessibility-compliance.html">E-Commerce Accessibility Compliance — The Complete 2026 Guide</a></li><li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li><li><a href="/blog/how-to-audit-website-accessibility.html">How to Audit Website Accessibility</a></li></ul>
+        </section>
+
+            <section><h2>FAQs</h2><div class="faq"><div class="faq-item"><h3>Does every ecommerce image need alt text?</h3><p>Informative images need meaningful alt text; purely decorative images should usually have empty alt text so assistive tech can ignore them.</p></div><div class="faq-item"><h3>Can AI-generated alt text solve WCAG 1.1.1 by itself?</h3><p>No. Generated text can help with drafting, but humans still need to verify accuracy, relevance, and merchandising context.</p></div><div class="faq-item"><h3>What product images are highest risk?</h3><p>Primary product photos, swatches, badges, icons, and any image that changes buying decisions are the first places to fix.</p></div></div></section>
+            <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+          </main>
+        </body>
+        </html>

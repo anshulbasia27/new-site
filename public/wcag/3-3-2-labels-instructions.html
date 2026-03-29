@@ -1,0 +1,106 @@
+        <!DOCTYPE html>
+        <html lang="en-US">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="geo.region" content="US" />
+          <title>WCAG 3.3.2 Labels — Every Input Needs a Label</title>
+          <meta name="description" content="WCAG 3.3.2 Labels — Every Input Needs a Label for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <link rel="canonical" href="https://altorlab.app/wcag/3-3-2-labels-instructions.html" />
+          <link rel="alternate" hreflang="en-us" href="https://altorlab.app/wcag/3-3-2-labels-instructions.html" />
+          <meta property="og:title" content="WCAG 3.3.2 Labels — Every Input Needs a Label" />
+          <meta property="og:description" content="WCAG 3.3.2 Labels — Every Input Needs a Label for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://altorlab.app/wcag/3-3-2-labels-instructions.html" />
+          <meta property="og:image" content="https://altorlab.app/og-image.svg" />
+          <meta property="og:locale" content="en_US" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="WCAG 3.3.2 Labels — Every Input Needs a Label" />
+          <meta name="twitter:description" content="WCAG 3.3.2 Labels — Every Input Needs a Label for ecommerce teams: plain-English explanation, audit steps, code fixes, and the store mistakes that create ADA risk." />
+          <meta name="twitter:image" content="https://altorlab.app/og-image.svg" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+          <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "WCAG 3.3.2 Labels — Every Input Needs a Label", "author": {"@type": "Organization", "name": "AltorLab"}, "publisher": {"@type": "Organization", "name": "AltorLab"}, "datePublished": "2026-03-29", "dateModified": "2026-03-29", "mainEntityOfPage": "https://altorlab.app/wcag/3-3-2-labels-instructions.html", "image": "https://altorlab.app/og-image.svg"}</script>
+          <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can placeholders count as labels?", "acceptedAnswer": {"@type": "Answer", "text": "No. Placeholders disappear, often have low contrast, and do not provide the same programmatic support as labels."}}, {"@type": "Question", "name": "What forms fail most often?", "acceptedAnswer": {"@type": "Answer", "text": "Email capture, checkout address fields, and embedded app forms are very common offenders."}}, {"@type": "Question", "name": "Do optional instructions matter?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If a format or rule matters, users should know it before submitting the form."}}]}</script>
+          <style>
+            body{margin:0;background:#080b12;color:#e5e7eb;font-family:'IBM Plex Sans',sans-serif;line-height:1.75}
+            main{max-width:960px;margin:0 auto;padding:40px 20px 84px}
+            h1,h2,h3{color:#f8fafc;line-height:1.22}
+            h1{font-size:clamp(2rem,4vw,3.2rem);margin:10px 0 18px}
+            h2{margin-top:42px}
+            a{color:#7dd3fc;text-decoration:none}
+            p,li{color:#dbe4ee}
+            .eyebrow{font-family:'IBM Plex Mono',monospace;color:#93c5fd;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem}
+            .cta{display:inline-block;margin:18px 0 10px;background:#22d3ee;color:#082f49;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none}
+            .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.92rem;color:#94a3b8;margin-bottom:18px}
+            .breadcrumbs span{color:#94a3b8}
+            .card,.callout{background:#0f172a;border:1px solid #1f2937;border-radius:14px;padding:18px}
+            .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+            .checklist{padding-left:22px}
+            .checklist li{margin-bottom:10px}
+            ul,ol{padding-left:22px}
+            table{width:100%;border-collapse:collapse;background:#0f172a;border:1px solid #1f2937;border-radius:12px;overflow:hidden}
+            th,td{border:1px solid #1f2937;padding:12px;text-align:left;vertical-align:top}
+            th{color:#f8fafc;background:#111827}
+            pre{background:#020617;border:1px solid #1f2937;border-radius:12px;padding:16px;overflow:auto}
+            code{font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:#c4f1ff}
+            .faq{display:grid;gap:14px}
+            .faq-item{background:#0f172a;border:1px solid #1f2937;border-radius:12px;padding:16px}
+            .links{columns:2;column-gap:28px}
+            .links li{break-inside:avoid;margin-bottom:8px}
+            .lede{font-size:1.08rem;color:#dbeafe}
+            @media (max-width:720px){.links{columns:1}}
+          </style>
+        </head>
+        <body>
+          <main>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="https://altorlab.app">Home</a><span>/</span><a href="https://altorlab.app/wcag/">WCAG</a><span>/</span><span aria-current="page">3-3-2-labels-instructions</span></nav>
+            <p class="eyebrow">WCAG for Ecommerce</p>
+            <h1>WCAG 3.3.2 Labels — Every Input Needs a Label</h1>
+            <div class="lede"><p>Users need labels and instructions that explain what information each input expects before they start typing.</p><p>For D2C teams, this is not just a standards question. It is a revenue-path question. When a WCAG criterion fails on a product page, filter interface, or checkout form, it creates both customer friction and legal exposure.</p></div>
+            <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+
+        <section>
+          <h2>What this means in plain English</h2>
+          <p>Users need labels and instructions that explain what information each input expects before they start typing.</p>
+          <p>On ecommerce sites, this criterion matters because shoppers are rarely reading one clean article. They are evaluating products, interacting with filters, switching variants, reviewing shipping promises, and moving through forms under time pressure. When the underlying accessibility rule breaks, the buying journey breaks with it.</p>
+        </section>
+        <section>
+          <h2>Why it matters for ecommerce</h2>
+          <div class="grid"><div class="card"><p><strong>Shipping forms</strong></p></div><div class="card"><p><strong>payment details</strong></p></div><div class="card"><p><strong>gift message fields</strong></p></div><div class="card"><p><strong>subscription opt-ins</strong></p></div></div>
+          <p>ADA complaints against online stores usually do not focus on abstract theory. They focus on failed tasks: a user cannot understand a product image, cannot interpret a discount, cannot complete a form, or cannot recover from an error. That is why even one overlooked success criterion can create outsized legal and commercial risk.</p>
+        </section>
+        <section>
+          <h2>How to check if you comply</h2>
+          <h3>Manual test</h3>
+          <p>Tab through forms and confirm each field is announced with a clear label and any required instructions before submission errors appear.</p>
+          <h3>Automated test</h3>
+          <p>Automated scanners catch many missing labels, but custom components and floating-label patterns still need manual verification.</p>
+        </section>
+        <section>
+          <h2>How to fix violations</h2>
+          <p>Pair each form input with a visible label, keep instructions close to the field, and avoid relying on placeholder text alone.</p>
+          <pre><code>&lt;label for=&quot;phone&quot;&gt;Phone number&lt;/label&gt;
+&lt;input id=&quot;phone&quot; type=&quot;tel&quot; /&gt;</code></pre>
+          <p>The best fix is usually at the component level. If the problem lives in a reusable product card, accordion, swatch selector, or form field, repair the shared component once instead of chasing the same violation page by page.</p>
+        </section>
+        <section>
+          <h2>Common mistakes stores make</h2>
+          <ul><li>Placeholder-only fields</li><li>labels visually hidden without reason</li><li>instruction text far from input</li><li>checkboxes with tiny unlabeled hit areas</li></ul>
+          <p>These mistakes recur because ecommerce teams optimize for speed, visual merchandising, and third-party integrations. Accessibility gets treated as cleanup work instead of release quality, so the same defect reappears with every new campaign or theme update.</p>
+        </section>
+        <section class="callout">
+          <h2>Why this matters legally</h2>
+          <p>In 2025, <strong>8,667 ADA lawsuits</strong> were filed across federal and state courts. Plaintiff firms do not need every WCAG failure to build pressure. They only need enough reproducible barriers to show that disabled shoppers cannot access the same buying journey. That makes criteria like WCAG 3.3.2 Labels — Every Input Needs a Label commercially and legally material, not academic.</p>
+        </section>
+        <section>
+          <h2>Related reading</h2>
+          <ul class="links"><li><a href="/wcag/">Browse all WCAG ecommerce guides</a></li><li><a href="/blog/ecommerce-accessibility-compliance.html">E-Commerce Accessibility Compliance — The Complete 2026 Guide</a></li><li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li><li><a href="/blog/how-to-audit-website-accessibility.html">How to Audit Website Accessibility</a></li></ul>
+        </section>
+
+            <section><h2>FAQs</h2><div class="faq"><div class="faq-item"><h3>Can placeholders count as labels?</h3><p>No. Placeholders disappear, often have low contrast, and do not provide the same programmatic support as labels.</p></div><div class="faq-item"><h3>What forms fail most often?</h3><p>Email capture, checkout address fields, and embedded app forms are very common offenders.</p></div><div class="faq-item"><h3>Do optional instructions matter?</h3><p>Yes. If a format or rule matters, users should know it before submitting the form.</p></div></div></section>
+            <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+          </main>
+        </body>
+        </html>

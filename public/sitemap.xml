@@ -2,110 +2,332 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://altorlab.app/</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://altorlab.app/shopify-ada-compliance.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://altorlab.app/woocommerce-ada-compliance.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/ada-lawsuits-2026.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/shopify-ada-compliance.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/ada-compliance-cost.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/accessibe-alternative.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/woocommerce-accessibility.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/wcag-2-2-changes.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/ada-compliance-mistakes.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/fashion-nova-settlement.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/what-happens-ignore-ada.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/ecommerce-accessibility-compliance.html</loc>
-    <lastmod>2026-03-23</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/ada-wcag-compliance-guide-ecommerce.html</loc>
-    <lastmod>2026-03-24</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://altorlab.app/blog/ada-wcag-compliance-guide.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://altorlab.app/blog/ada-website-lawsuit-statistics-2026</loc>
-    <lastmod>2026-03-26</lastmod>
+    <loc>https://altorlab.app/blog/ada-website-lawsuit-statistics-2026.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://altorlab.app/blog/how-to-audit-website-accessibility</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://altorlab.app/blog/how-to-audit-website-accessibility.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/shopify.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/woocommerce.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/bigcommerce.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/squarespace.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/wix.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/magento.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/webflow.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/1-1-1-non-text-content.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/1-3-1-info-relationships.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/1-4-1-use-of-color.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/1-4-3-contrast-minimum.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/1-4-4-resize-text.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/2-1-1-keyboard.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/2-4-1-bypass-blocks.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/2-4-2-page-titled.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/2-4-4-link-purpose.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/3-1-1-language-of-page.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/3-3-1-error-identification.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/3-3-2-labels-instructions.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/4-1-1-parsing.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/4-1-2-name-role-value.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/2-4-7-focus-visible.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/vs/accessibe.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/vs/userway.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/vs/deque-axe.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/vs/siteimprove.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/vs/wave.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/fashion.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/beauty.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/food-beverage.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/supplements.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/jewelry.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/home-goods.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/platforms/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/wcag/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/vs/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://altorlab.app/industries/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>
