@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCAG 3.2.3 Consistent Navigation — ADA Compliance Guide | AltorLab</title>
+<meta name="description" content="Consistent Navigation explained for ecommerce sites. Learn what WCAG 3.2.3 requires, common violations on Shopify/WooCommerce, and how to fix them.">
+<meta name="geo.region" content="US">
+<link rel="canonical" href="https://altorlab.app/wcag/3.2.3-consistent-navigation.html">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 1.8rem; color: #f5f5f5; }
+h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+a { color: #60a5fa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
+.level-a { background: #22c55e20; color: #22c55e; }
+.level-aa { background: #eab30820; color: #eab308; }
+.level-aaa { background: #ef444420; color: #ef4444; }
+pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; }
+ul, ol { padding-left: 20px; }
+.card-grid { display: grid; gap: 12px; }
+.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
+.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is WCAG 3.2.3?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Repeated navigation should stay in the same relative order across the store so users can build familiarity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does WCAG 3.2.3 affect ecommerce sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It affects ecommerce anywhere shoppers interact with header nav order changes between homepage, pdps, and help center. and mobile menu puts account before search on some templates and after search on others. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to fix WCAG 3.2.3 violations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start by auditing the live storefront, then Keep repeated nav items in a stable order across templates.; Only change navigation order when the change serves a strong user need.; Use shared navigation components rather than per-template custom menus.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav><a href="/">← AltorLab</a> · <a href="/wcag/">WCAG Guide</a></nav>
+<article>
+<h1>WCAG 3.2.3: Consistent Navigation</h1>
+<span class="badge level-aa">Level AA</span>
+<p><strong>Quick answer:</strong> Repeated navigation should stay in the same relative order across the store so users can build familiarity.</p>
+<h2>What This Means</h2>
+<p>On ecommerce sites, Consistent Navigation usually shows up in repeating storefront components such as product cards, PDP media, search results, cart drawers, checkout forms, and support content. If the live experience depends on patterns like header nav order changes between homepage, pdps, and help center. or mobile menu puts account before search on some templates and after search on others., disabled shoppers can lose context or get blocked before purchase.</p>
+<p>This criterion matters because D2C teams often fix the homepage but miss reusable app blocks, campaign pages, and mobile-specific UI. The practical standard is simple: build the same outcome for keyboard users, screen-reader users, low-vision users, and anyone relying on captions, labels, structure, or predictable behavior.</p>
+<p>For Shopify, WooCommerce, and custom storefronts, the fastest remediation path is usually template-level work. Fix the repeated component once, then retest every place it appears across browse, buy, and post-purchase journeys.</p>
+<h2>Common Violations on Ecommerce Sites</h2>
+<ul>
+<li>Header nav order changes between homepage, PDPs, and help center.</li>
+<li>Mobile menu puts account before search on some templates and after search on others.</li>
+<li>Footer policy links swap order by campaign page.</li>
+<li>Checkout side navigation differs from account navigation patterns without reason.</li>
+</ul>
+<h2>How to Fix It</h2>
+<p>Start with the live customer journey, not isolated components in Storybook or Figma. Audit the problem on category pages, product detail pages, quick views, cart, checkout, account, and help templates.</p>
+<ol>
+<li>Keep repeated nav items in a stable order across templates.</li>
+<li>Only change navigation order when the change serves a strong user need.</li>
+<li>Use shared navigation components rather than per-template custom menus.</li>
+<li>Audit CMS-managed landing pages that often drift from the system menu order.</li>
+</ol>
+<p>On Shopify, fix the theme section or app block that repeats the defect. On WooCommerce and WordPress, update the template override or plugin output. In custom React or headless storefronts, move the fix into shared components so merchandisers cannot reintroduce the issue with every campaign.</p>
+<h2>Code Example</h2>
+<pre><code>&lt;!-- Before --&gt;
+&lt;nav&gt;&lt;a&gt;Shop&lt;/a&gt;&lt;a&gt;Help&lt;/a&gt;&lt;a&gt;Account&lt;/a&gt;&lt;/nav&gt;
+
+&lt;!-- After --&gt;
+&lt;nav&gt;&lt;a&gt;Shop&lt;/a&gt;&lt;a&gt;Account&lt;/a&gt;&lt;a&gt;Help&lt;/a&gt;&lt;/nav&gt;</code></pre>
+<section>
+<h2>FAQ</h2>
+<p><strong>What is WCAG 3.2.3?</strong><br>Repeated navigation should stay in the same relative order across the store so users can build familiarity.</p>
+<p><strong>How does WCAG 3.2.3 affect ecommerce sites?</strong><br>It affects ecommerce anywhere shoppers interact with header nav order changes between homepage, pdps, and help center. and mobile menu puts account before search on some templates and after search on others. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout.</p>
+<p><strong>How to fix WCAG 3.2.3 violations?</strong><br>Start by auditing the live storefront, then Keep repeated nav items in a stable order across templates.; Only change navigation order when the change serves a strong user need.; Use shared navigation components rather than per-template custom menus.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages.</p>
+</section>
+<p><strong>Check if your store passes WCAG 3.2.3 →</strong> <a href="https://altorlab.app">Free ADA Compliance Scan</a></p>
+</article>
+<footer class="footer">
+<a href="/wcag/">All WCAG Criteria</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a>
+</footer>
+</body>
+</html>

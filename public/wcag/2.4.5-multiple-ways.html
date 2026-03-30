@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCAG 2.4.5 Multiple Ways — ADA Compliance Guide | AltorLab</title>
+<meta name="description" content="Multiple Ways explained for ecommerce sites. Learn what WCAG 2.4.5 requires, common violations on Shopify/WooCommerce, and how to fix them.">
+<meta name="geo.region" content="US">
+<link rel="canonical" href="https://altorlab.app/wcag/2.4.5-multiple-ways.html">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 1.8rem; color: #f5f5f5; }
+h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+a { color: #60a5fa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
+.level-a { background: #22c55e20; color: #22c55e; }
+.level-aa { background: #eab30820; color: #eab308; }
+.level-aaa { background: #ef444420; color: #ef4444; }
+pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; }
+ul, ol { padding-left: 20px; }
+.card-grid { display: grid; gap: 12px; }
+.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
+.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is WCAG 2.4.5?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Important pages should be reachable through more than one path so users are not forced into a single navigation pattern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does WCAG 2.4.5 affect ecommerce sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It affects ecommerce anywhere shoppers interact with return-policy pages are only reachable through a footer search term. and gift cards can only be found through a homepage hero and not site navigation. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to fix WCAG 2.4.5 violations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start by auditing the live storefront, then Expose important destinations through search, navigation, and contextual links.; Keep help, policy, and account pages discoverable from more than one interface pattern.; Use XML and HTML sitemaps as backup discovery paths for crawlers and users.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav><a href="/">← AltorLab</a> · <a href="/wcag/">WCAG Guide</a></nav>
+<article>
+<h1>WCAG 2.4.5: Multiple Ways</h1>
+<span class="badge level-aa">Level AA</span>
+<p><strong>Quick answer:</strong> Important pages should be reachable through more than one path so users are not forced into a single navigation pattern.</p>
+<h2>What This Means</h2>
+<p>On ecommerce sites, Multiple Ways usually shows up in repeating storefront components such as product cards, PDP media, search results, cart drawers, checkout forms, and support content. If the live experience depends on patterns like return-policy pages are only reachable through a footer search term. or gift cards can only be found through a homepage hero and not site navigation., disabled shoppers can lose context or get blocked before purchase.</p>
+<p>This criterion matters because D2C teams often fix the homepage but miss reusable app blocks, campaign pages, and mobile-specific UI. The practical standard is simple: build the same outcome for keyboard users, screen-reader users, low-vision users, and anyone relying on captions, labels, structure, or predictable behavior.</p>
+<p>For Shopify, WooCommerce, and custom storefronts, the fastest remediation path is usually template-level work. Fix the repeated component once, then retest every place it appears across browse, buy, and post-purchase journeys.</p>
+<h2>Common Violations on Ecommerce Sites</h2>
+<ul>
+<li>Return-policy pages are only reachable through a footer search term.</li>
+<li>Gift cards can only be found through a homepage hero and not site navigation.</li>
+<li>Support articles are available only inside chatbot responses.</li>
+<li>Size guides exist only as links inside PDP accordions.</li>
+</ul>
+<h2>How to Fix It</h2>
+<p>Start with the live customer journey, not isolated components in Storybook or Figma. Audit the problem on category pages, product detail pages, quick views, cart, checkout, account, and help templates.</p>
+<ol>
+<li>Expose important destinations through search, navigation, and contextual links.</li>
+<li>Keep help, policy, and account pages discoverable from more than one interface pattern.</li>
+<li>Use XML and HTML sitemaps as backup discovery paths for crawlers and users.</li>
+<li>Audit seasonal landing pages that vanish from nav but remain business-critical.</li>
+</ol>
+<p>On Shopify, fix the theme section or app block that repeats the defect. On WooCommerce and WordPress, update the template override or plugin output. In custom React or headless storefronts, move the fix into shared components so merchandisers cannot reintroduce the issue with every campaign.</p>
+<h2>Code Example</h2>
+<pre><code>&lt;!-- Before --&gt;
+&lt;a href=&quot;/returns&quot;&gt;Returns&lt;/a&gt;
+
+&lt;!-- After --&gt;
+&lt;nav&gt;&lt;a href=&quot;/help&quot;&gt;Help Center&lt;/a&gt; &lt;a href=&quot;/returns&quot;&gt;Returns&lt;/a&gt;&lt;/nav&gt;</code></pre>
+<section>
+<h2>FAQ</h2>
+<p><strong>What is WCAG 2.4.5?</strong><br>Important pages should be reachable through more than one path so users are not forced into a single navigation pattern.</p>
+<p><strong>How does WCAG 2.4.5 affect ecommerce sites?</strong><br>It affects ecommerce anywhere shoppers interact with return-policy pages are only reachable through a footer search term. and gift cards can only be found through a homepage hero and not site navigation. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout.</p>
+<p><strong>How to fix WCAG 2.4.5 violations?</strong><br>Start by auditing the live storefront, then Expose important destinations through search, navigation, and contextual links.; Keep help, policy, and account pages discoverable from more than one interface pattern.; Use XML and HTML sitemaps as backup discovery paths for crawlers and users.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages.</p>
+</section>
+<p><strong>Check if your store passes WCAG 2.4.5 →</strong> <a href="https://altorlab.app">Free ADA Compliance Scan</a></p>
+</article>
+<footer class="footer">
+<a href="/wcag/">All WCAG Criteria</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a>
+</footer>
+</body>
+</html>

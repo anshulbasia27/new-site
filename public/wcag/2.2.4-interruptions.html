@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCAG 2.2.4 Interruptions — ADA Compliance Guide | AltorLab</title>
+<meta name="description" content="Interruptions explained for ecommerce sites. Learn what WCAG 2.2.4 requires, common violations on Shopify/WooCommerce, and how to fix them.">
+<meta name="geo.region" content="US">
+<link rel="canonical" href="https://altorlab.app/wcag/2.2.4-interruptions.html">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 1.8rem; color: #f5f5f5; }
+h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+a { color: #60a5fa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
+.level-a { background: #22c55e20; color: #22c55e; }
+.level-aa { background: #eab30820; color: #eab308; }
+.level-aaa { background: #ef444420; color: #ef4444; }
+pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; }
+ul, ol { padding-left: 20px; }
+.card-grid { display: grid; gap: 12px; }
+.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
+.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is WCAG 2.2.4?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interruptions should be postponable or suppressible unless they are genuinely urgent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does WCAG 2.2.4 affect ecommerce sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It affects ecommerce anywhere shoppers interact with loyalty popups interrupt checkout while users fill payment details. and support chat greetings steal attention during order tracking. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to fix WCAG 2.2.4 violations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start by auditing the live storefront, then Suppress non-essential popups during focused tasks like checkout and account recovery.; Let users postpone or dismiss marketing interruptions for the session.; Reserve assertive interruptions for security or legal emergencies only.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav><a href="/">← AltorLab</a> · <a href="/wcag/">WCAG Guide</a></nav>
+<article>
+<h1>WCAG 2.2.4: Interruptions</h1>
+<span class="badge level-aaa">Level AAA</span>
+<p><strong>Quick answer:</strong> Interruptions should be postponable or suppressible unless they are genuinely urgent.</p>
+<h2>What This Means</h2>
+<p>On ecommerce sites, Interruptions usually shows up in repeating storefront components such as product cards, PDP media, search results, cart drawers, checkout forms, and support content. If the live experience depends on patterns like loyalty popups interrupt checkout while users fill payment details. or support chat greetings steal attention during order tracking., disabled shoppers can lose context or get blocked before purchase.</p>
+<p>This criterion matters because D2C teams often fix the homepage but miss reusable app blocks, campaign pages, and mobile-specific UI. The practical standard is simple: build the same outcome for keyboard users, screen-reader users, low-vision users, and anyone relying on captions, labels, structure, or predictable behavior.</p>
+<p>For Shopify, WooCommerce, and custom storefronts, the fastest remediation path is usually template-level work. Fix the repeated component once, then retest every place it appears across browse, buy, and post-purchase journeys.</p>
+<h2>Common Violations on Ecommerce Sites</h2>
+<ul>
+<li>Loyalty popups interrupt checkout while users fill payment details.</li>
+<li>Support chat greetings steal attention during order tracking.</li>
+<li>Newsletter modals appear repeatedly while users read care instructions.</li>
+<li>Live inventory nudges interrupt screen-reader reading with frequent popups.</li>
+</ul>
+<h2>How to Fix It</h2>
+<p>Start with the live customer journey, not isolated components in Storybook or Figma. Audit the problem on category pages, product detail pages, quick views, cart, checkout, account, and help templates.</p>
+<ol>
+<li>Suppress non-essential popups during focused tasks like checkout and account recovery.</li>
+<li>Let users postpone or dismiss marketing interruptions for the session.</li>
+<li>Reserve assertive interruptions for security or legal emergencies only.</li>
+<li>Coordinate marketing scripts so they respect task context and accessibility settings.</li>
+</ol>
+<p>On Shopify, fix the theme section or app block that repeats the defect. On WooCommerce and WordPress, update the template override or plugin output. In custom React or headless storefronts, move the fix into shared components so merchandisers cannot reintroduce the issue with every campaign.</p>
+<h2>Code Example</h2>
+<pre><code>&lt;!-- Before --&gt;
+openPopup(&#x27;Join SMS for 10% off&#x27;);
+
+&lt;!-- After --&gt;
+if (!isCheckoutPage) openPopup(&#x27;Join SMS for 10% off&#x27;);</code></pre>
+<section>
+<h2>FAQ</h2>
+<p><strong>What is WCAG 2.2.4?</strong><br>Interruptions should be postponable or suppressible unless they are genuinely urgent.</p>
+<p><strong>How does WCAG 2.2.4 affect ecommerce sites?</strong><br>It affects ecommerce anywhere shoppers interact with loyalty popups interrupt checkout while users fill payment details. and support chat greetings steal attention during order tracking. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout.</p>
+<p><strong>How to fix WCAG 2.2.4 violations?</strong><br>Start by auditing the live storefront, then Suppress non-essential popups during focused tasks like checkout and account recovery.; Let users postpone or dismiss marketing interruptions for the session.; Reserve assertive interruptions for security or legal emergencies only.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages.</p>
+</section>
+<p><strong>Check if your store passes WCAG 2.2.4 →</strong> <a href="https://altorlab.app">Free ADA Compliance Scan</a></p>
+</article>
+<footer class="footer">
+<a href="/wcag/">All WCAG Criteria</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a>
+</footer>
+</body>
+</html>

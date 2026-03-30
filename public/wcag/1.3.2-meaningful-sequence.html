@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCAG 1.3.2 Meaningful Sequence — ADA Compliance Guide | AltorLab</title>
+<meta name="description" content="Meaningful Sequence explained for ecommerce sites. Learn what WCAG 1.3.2 requires, common violations on Shopify/WooCommerce, and how to fix them.">
+<meta name="geo.region" content="US">
+<link rel="canonical" href="https://altorlab.app/wcag/1.3.2-meaningful-sequence.html">
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 1.8rem; color: #f5f5f5; }
+h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+a { color: #60a5fa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
+.level-a { background: #22c55e20; color: #22c55e; }
+.level-aa { background: #eab30820; color: #eab308; }
+.level-aaa { background: #ef444420; color: #ef4444; }
+pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; }
+ul, ol { padding-left: 20px; }
+.card-grid { display: grid; gap: 12px; }
+.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
+.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is WCAG 1.3.2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The reading and focus order in code must match the order that makes sense for understanding and completing a shopping task."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does WCAG 1.3.2 affect ecommerce sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It affects ecommerce anywhere shoppers interact with css reorders the mobile pdp so the add to cart button is announced before product name and price. and a sticky promo bar appears visually last but is first in dom order, interrupting reading flow. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How to fix WCAG 1.3.2 violations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start by auditing the live storefront, then Keep DOM order aligned with the logical task order for browsing and checkout.; Avoid using CSS order to create a reading experience different from the source HTML.; Test linearized output with styles off or a screen reader to confirm the story still makes sense.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav><a href="/">← AltorLab</a> · <a href="/wcag/">WCAG Guide</a></nav>
+<article>
+<h1>WCAG 1.3.2: Meaningful Sequence</h1>
+<span class="badge level-a">Level A</span>
+<p><strong>Quick answer:</strong> The reading and focus order in code must match the order that makes sense for understanding and completing a shopping task.</p>
+<h2>What This Means</h2>
+<p>On ecommerce sites, Meaningful Sequence usually shows up in repeating storefront components such as product cards, PDP media, search results, cart drawers, checkout forms, and support content. If the live experience depends on patterns like css reorders the mobile pdp so the add to cart button is announced before product name and price. or a sticky promo bar appears visually last but is first in dom order, interrupting reading flow., disabled shoppers can lose context or get blocked before purchase.</p>
+<p>This criterion matters because D2C teams often fix the homepage but miss reusable app blocks, campaign pages, and mobile-specific UI. The practical standard is simple: build the same outcome for keyboard users, screen-reader users, low-vision users, and anyone relying on captions, labels, structure, or predictable behavior.</p>
+<p>For Shopify, WooCommerce, and custom storefronts, the fastest remediation path is usually template-level work. Fix the repeated component once, then retest every place it appears across browse, buy, and post-purchase journeys.</p>
+<h2>Common Violations on Ecommerce Sites</h2>
+<ul>
+<li>CSS reorders the mobile PDP so the Add to Cart button is announced before product name and price.</li>
+<li>A sticky promo bar appears visually last but is first in DOM order, interrupting reading flow.</li>
+<li>Split checkout layouts place the order summary before the shipping form for screen readers.</li>
+<li>Accordion content is visually tied to headings but rendered elsewhere in the DOM.</li>
+</ul>
+<h2>How to Fix It</h2>
+<p>Start with the live customer journey, not isolated components in Storybook or Figma. Audit the problem on category pages, product detail pages, quick views, cart, checkout, account, and help templates.</p>
+<ol>
+<li>Keep DOM order aligned with the logical task order for browsing and checkout.</li>
+<li>Avoid using CSS order to create a reading experience different from the source HTML.</li>
+<li>Test linearized output with styles off or a screen reader to confirm the story still makes sense.</li>
+<li>Render supporting content like promo bars and accordions near their trigger in the DOM.</li>
+</ol>
+<p>On Shopify, fix the theme section or app block that repeats the defect. On WooCommerce and WordPress, update the template override or plugin output. In custom React or headless storefronts, move the fix into shared components so merchandisers cannot reintroduce the issue with every campaign.</p>
+<h2>Code Example</h2>
+<pre><code>&lt;!-- Before --&gt;
+&lt;main&gt;
+  &lt;button&gt;Add to cart&lt;/button&gt;
+  &lt;h1&gt;Canvas Tote&lt;/h1&gt;
+&lt;/main&gt;
+
+&lt;!-- After --&gt;
+&lt;main&gt;
+  &lt;h1&gt;Canvas Tote&lt;/h1&gt;
+  &lt;p&gt;$48&lt;/p&gt;
+  &lt;button&gt;Add to cart&lt;/button&gt;
+&lt;/main&gt;</code></pre>
+<section>
+<h2>FAQ</h2>
+<p><strong>What is WCAG 1.3.2?</strong><br>The reading and focus order in code must match the order that makes sense for understanding and completing a shopping task.</p>
+<p><strong>How does WCAG 1.3.2 affect ecommerce sites?</strong><br>It affects ecommerce anywhere shoppers interact with css reorders the mobile pdp so the add to cart button is announced before product name and price. and a sticky promo bar appears visually last but is first in dom order, interrupting reading flow. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout.</p>
+<p><strong>How to fix WCAG 1.3.2 violations?</strong><br>Start by auditing the live storefront, then Keep DOM order aligned with the logical task order for browsing and checkout.; Avoid using CSS order to create a reading experience different from the source HTML.; Test linearized output with styles off or a screen reader to confirm the story still makes sense.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages.</p>
+</section>
+<p><strong>Check if your store passes WCAG 1.3.2 →</strong> <a href="https://altorlab.app">Free ADA Compliance Scan</a></p>
+</article>
+<footer class="footer">
+<a href="/wcag/">All WCAG Criteria</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a>
+</footer>
+</body>
+</html>
