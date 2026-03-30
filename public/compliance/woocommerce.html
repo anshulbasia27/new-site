@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADA Compliance for WooCommerce — Complete Guide | AltorLab</title>
+<meta name="description" content="ADA compliance guide for WooCommerce stores. Learn the most common accessibility violations, platform-specific remediation steps, and tools that help.">
+<meta name="geo.region" content="US">
+<link rel="canonical" href="https://altorlab.app/compliance/woocommerce.html">
+<style>body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 1.8rem; color: #f5f5f5; }
+h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+a { color: #60a5fa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
+.level-a { background: #22c55e20; color: #22c55e; }
+.level-aa { background: #eab30820; color: #eab308; }
+.level-aaa { background: #ef444420; color: #ef4444; }
+pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; }
+ul, ol { padding-left: 20px; }
+.card-grid { display: grid; gap: 12px; }
+.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
+.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is WooCommerce automatically ADA compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. WooCommerce can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What accessibility issues are common on WooCommerce stores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common issues include theme overrides frequently break native form labels, heading structure, and semantic buttons. and plugin-heavy stores accumulate modal popups, variation scripts, and payment extensions that conflict with keyboard support. Those defects usually appear on product pages, filters, carts, popups, and forms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a brand fix WooCommerce accessibility problems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with an audit of the live storefront, then inventory all active commerce, marketing, and builder plugins affecting frontend output. and compare overridden woocommerce templates against current accessible defaults. Prioritize fixes in reusable templates before individual pages."
+      }
+    }
+  ]
+}</script>
+</head>
+<body>
+<nav><a href="/">← AltorLab</a> · <a href="/compliance/">Platform Guides</a></nav>
+<article>
+<h1>ADA Compliance for WooCommerce</h1>
+<p><strong>Quick answer:</strong> No. WooCommerce can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
+<h2>Why WooCommerce Stores Get Flagged</h2>
+<p>WooCommerce brands usually get into trouble when rapid merchandising and app installs outrun accessibility QA. A good-looking storefront can still fail WCAG because the real risk sits in filters, carousels, forms, popups, and checkout-adjacent interactions.</p>
+<ul><li>Theme overrides frequently break native form labels, heading structure, and semantic buttons.</li>
+<li>Plugin-heavy stores accumulate modal popups, variation scripts, and payment extensions that conflict with keyboard support.</li>
+<li>Cart, checkout, and account pages often mix theme CSS with plugin HTML, creating contrast and focus regressions.</li>
+<li>Builders layered on top of WooCommerce can output div-based controls instead of native commerce elements.</li></ul>
+<h2>Apps, Plugins, or Platform Features That Help</h2>
+<p>Helpful tools can speed up detection and clean up content operations, but they do not replace manual testing or component-level remediation.</p>
+<ul><li>Accessible-ready WordPress themes provide a better baseline, but WooCommerce templates still need manual review.</li>
+<li>Plugins such as code snippets, SEO tools, and builders should be screened for frontend accessibility impact before launch.</li>
+<li>WordPress media and block editing can support better alt text, headings, and link text when content governance is strong.</li>
+<li>WooCommerce core templates</li>
+<li>WordPress block editor</li>
+<li>Accessible-ready themes</li></ul>
+<h2>How to Remediate WooCommerce Accessibility Issues</h2>
+<ol><li>Inventory all active commerce, marketing, and builder plugins affecting frontend output.</li>
+<li>Compare overridden WooCommerce templates against current accessible defaults.</li>
+<li>Fix reusable PHP template parts and block patterns before individual product pages.</li>
+<li>Retest payment, coupon, account, and returns flows after every plugin update.</li></ol>
+<p>Focus first on global templates and installed extensions that repeat across the site. Once navigation, product templates, forms, modals, and cart patterns are fixed, the long tail of content becomes much easier to govern.</p>
+<h2>FAQ</h2>
+<p><strong>Is WooCommerce automatically ADA compliant?</strong><br>No. WooCommerce can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
+<p><strong>What accessibility issues are common on WooCommerce stores?</strong><br>Common issues include theme overrides frequently break native form labels, heading structure, and semantic buttons. and plugin-heavy stores accumulate modal popups, variation scripts, and payment extensions that conflict with keyboard support. Those defects usually appear on product pages, filters, carts, popups, and forms.</p>
+<p><strong>How should a brand fix WooCommerce accessibility problems?</strong><br>Start with an audit of the live storefront, then inventory all active commerce, marketing, and builder plugins affecting frontend output. and compare overridden woocommerce templates against current accessible defaults. Prioritize fixes in reusable templates before individual pages.</p>
+<p><strong>Want a live audit instead of a checklist?</strong> <a href="https://altorlab.app">Run AltorLab's free ADA compliance scan</a>.</p>
+</article>
+<footer class="footer"><a href="/compliance/">All platform guides</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a></footer>
+</body>
+</html>

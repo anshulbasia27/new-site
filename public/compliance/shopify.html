@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADA Compliance for Shopify — Complete Guide | AltorLab</title>
+<meta name="description" content="ADA compliance guide for Shopify stores. Learn the most common accessibility violations, platform-specific remediation steps, and tools that help.">
+<meta name="geo.region" content="US">
+<link rel="canonical" href="https://altorlab.app/compliance/shopify.html">
+<style>body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
+h1 { font-size: 1.8rem; color: #f5f5f5; }
+h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+a { color: #60a5fa; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
+.level-a { background: #22c55e20; color: #22c55e; }
+.level-aa { background: #eab30820; color: #eab308; }
+.level-aaa { background: #ef444420; color: #ef4444; }
+pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+code { font-family: ui-monospace, SFMono-Regular, monospace; }
+ul, ol { padding-left: 20px; }
+.card-grid { display: grid; gap: 12px; }
+.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
+.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Shopify automatically ADA compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Shopify can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What accessibility issues are common on Shopify stores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Common issues include theme sections often ship with low-contrast buttons, unlabeled variant swatches, and inaccessible mega menus. and popular shopify apps inject review widgets, popups, and bundles that break focus order or trap keyboard users. Those defects usually appear on product pages, filters, carts, popups, and forms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should a brand fix Shopify accessibility problems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with an audit of the live storefront, then audit the live theme, installed apps, and custom storefront scripts—not just a staging theme. and fix core templates first: header, navigation, pdp, cart, and checkout-adjacent flows. Prioritize fixes in reusable templates before individual pages."
+      }
+    }
+  ]
+}</script>
+</head>
+<body>
+<nav><a href="/">← AltorLab</a> · <a href="/compliance/">Platform Guides</a></nav>
+<article>
+<h1>ADA Compliance for Shopify</h1>
+<p><strong>Quick answer:</strong> No. Shopify can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
+<h2>Why Shopify Stores Get Flagged</h2>
+<p>Shopify brands usually get into trouble when rapid merchandising and app installs outrun accessibility QA. A good-looking storefront can still fail WCAG because the real risk sits in filters, carousels, forms, popups, and checkout-adjacent interactions.</p>
+<ul><li>Theme sections often ship with low-contrast buttons, unlabeled variant swatches, and inaccessible mega menus.</li>
+<li>Popular Shopify apps inject review widgets, popups, and bundles that break focus order or trap keyboard users.</li>
+<li>Media-heavy PDPs rely on carousels, quick views, and sticky carts that often fail WCAG 2.2 focus and target-size checks.</li>
+<li>Shopify checkout extensibility can leave address, promo, and payment add-ons with inconsistent labeling and error handling.</li></ul>
+<h2>Apps, Plugins, or Platform Features That Help</h2>
+<p>Helpful tools can speed up detection and clean up content operations, but they do not replace manual testing or component-level remediation.</p>
+<ul><li>Dawn-based themes are easier to harden than heavily customized legacy themes.</li>
+<li>Apps like accessibility checkers can surface obvious issues, but manual QA is still required for theme code and third-party widgets.</li>
+<li>Shopify admin supports alt text, product media management, and metafields that can power better semantics when used consistently.</li>
+<li>Shopify native theme controls</li>
+<li>Manual keyboard and screen-reader QA</li>
+<li>Accessibility-aware design system components</li></ul>
+<h2>How to Remediate Shopify Accessibility Issues</h2>
+<ol><li>Audit the live theme, installed apps, and custom storefront scripts—not just a staging theme.</li>
+<li>Fix core templates first: header, navigation, PDP, cart, and checkout-adjacent flows.</li>
+<li>Replace inaccessible app widgets or isolate them behind accessible wrappers and fallbacks.</li>
+<li>Create a release checklist so new campaigns, sections, and apps do not reintroduce WCAG violations.</li></ol>
+<p>Focus first on global templates and installed extensions that repeat across the site. Once navigation, product templates, forms, modals, and cart patterns are fixed, the long tail of content becomes much easier to govern.</p>
+<h2>FAQ</h2>
+<p><strong>Is Shopify automatically ADA compliant?</strong><br>No. Shopify can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
+<p><strong>What accessibility issues are common on Shopify stores?</strong><br>Common issues include theme sections often ship with low-contrast buttons, unlabeled variant swatches, and inaccessible mega menus. and popular shopify apps inject review widgets, popups, and bundles that break focus order or trap keyboard users. Those defects usually appear on product pages, filters, carts, popups, and forms.</p>
+<p><strong>How should a brand fix Shopify accessibility problems?</strong><br>Start with an audit of the live storefront, then audit the live theme, installed apps, and custom storefront scripts—not just a staging theme. and fix core templates first: header, navigation, pdp, cart, and checkout-adjacent flows. Prioritize fixes in reusable templates before individual pages.</p>
+<p><strong>Want a live audit instead of a checklist?</strong> <a href="https://altorlab.app">Run AltorLab's free ADA compliance scan</a>.</p>
+</article>
+<footer class="footer"><a href="/compliance/">All platform guides</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a></footer>
+</body>
+</html>
