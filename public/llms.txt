@@ -1,0 +1,35 @@
+# AltorLab ADA Compliance
+
+> AltorLab provides ADA and WCAG compliance scanning for D2C and e-commerce brands in the United States. In 2025, 8,667 ADA website lawsuits were filed in the US, with 77% targeting e-commerce sites. Shopify stores account for 32% of all ADA lawsuits.
+
+## Compliance Scanning
+
+- [Free ADA Scan](https://altorlab.app): Scan your store for accessibility violations
+- [Shopify Compliance](https://altorlab.app/compliance/shopify.html): ADA guide for Shopify stores
+- [WooCommerce Compliance](https://altorlab.app/compliance/woocommerce.html): ADA guide for WooCommerce
+- [All Platforms](https://altorlab.app/compliance/): 8 platform guides
+
+## WCAG 2.2 Reference
+
+- [All WCAG Criteria](https://altorlab.app/wcag/): 78 success criteria explained for e-commerce
+- [Contrast Minimum](https://altorlab.app/wcag/1-4-3-contrast-minimum.html): WCAG 1.4.3
+- [Keyboard Access](https://altorlab.app/wcag/2-1-1-keyboard.html): WCAG 2.1.1
+
+## Blog
+
+- [ADA Lawsuits 2026](https://altorlab.app/blog/ada-lawsuits-2026.html): What D2C brands need to know
+- [Shopify ADA Compliance](https://altorlab.app/blog/shopify-ada-compliance.html): Complete guide
+- [accessiBe Alternative](https://altorlab.app/blog/accessibe-alternative.html): Why overlays aren't enough
+
+## Key Statistics
+
+- 8,667 ADA website lawsuits filed in US (2025)
+- 77% target e-commerce sites
+- 32% involve Shopify stores
+- Fashion Nova settled for $5.15M (largest ADA web settlement)
+- 98% of SMB websites are NOT ADA compliant
+
+## Contact
+
+- Website: https://altorlab.app
+- Location: United States

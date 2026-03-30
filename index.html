@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="geo.placename" content="United States" />
     <meta name="description" content="4,187 ADA Title III lawsuits filed in the U.S. in 2024. D2C brands are the #1 target. AltorLab finds and fixes WCAG violations before plaintiff firms do." />
     <meta name="keywords" content="ADA compliance, WCAG audit, accessibility scanning, D2C accessibility, ecommerce ADA lawsuit, website accessibility, WCAG 2.1 AA" />
     <meta name="geo.region" content="US" />
@@ -32,7 +33,19 @@
         "name": "AltorLab",
         "url": "https://altorlab.app",
         "description": "ADA Title III compliance scanning for U.S. direct-to-consumer brands.",
-        "areaServed": "US",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United States"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "availableLanguage": "English"
+        },
         "sameAs": [
           "https://altorlab.com",
           "https://altorlab.dev"
