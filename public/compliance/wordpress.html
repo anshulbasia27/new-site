@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="geo.placename" content="United States" />
-<link rel="alternate" hreflang="en-us" href="https://altorlab.app/compliance/wordpress.html">
-<title>ADA Compliance for WordPress — Complete Guide | AltorLab</title>
-<meta name="description" content="ADA compliance guide for WordPress stores. Learn the most common accessibility violations, platform-specific remediation steps, and tools that help.">
-<meta name="geo.region" content="US" />
-<link rel="canonical" href="https://altorlab.app/compliance/wordpress.html">
-<style>body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
-h1 { font-size: 1.8rem; color: #f5f5f5; }
-h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
-a { color: #60a5fa; }
-.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
-.level-a { background: #22c55e20; color: #22c55e; }
-.level-aa { background: #eab30820; color: #eab308; }
-.level-aaa { background: #ef444420; color: #ef4444; }
-pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
-code { font-family: ui-monospace, SFMono-Regular, monospace; }
-ul, ol { padding-left: 20px; }
-.card-grid { display: grid; gap: 12px; }
-.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
-.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }</style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is WordPress automatically ADA compliant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. WordPress can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements."
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="geo.placename" content="United States" />
+  <meta name="geo.region" content="US" />
+  <title>ADA Compliance for WordPress — US Store Guide | AltorLab</title>
+  <meta name="description" content="US ADA compliance guide for WordPress stores with ADA Title III exposure, WCAG 2.2 expectations, and plugin-sprawl remediation guidance." />
+  <link rel="canonical" href="https://altorlab.app/compliance/wordpress.html" />
+  <link rel="alternate" hreflang="en-us" href="https://altorlab.app/compliance/wordpress.html" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 840px; margin-inline: auto; padding: 20px; line-height: 1.72; color: #e5e7eb; background: #0a0a0a; }
+    h1 { font-size: 1.95rem; color: #f8fafc; line-height: 1.2; }
+    h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+    h3 { color: #f8fafc; }
+    p, li { font-size: 1rem; }
+    a { color: #7dd3fc; }
+    ul, ol { padding-left: 20px; }
+    .eyebrow { color: #93c5fd; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+    .cta { display: inline-block; margin: 18px 0 26px; background: #22d3ee; color: #082f49; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+    .card { border: 1px solid #1f2937; border-radius: 12px; padding: 18px; background: #0f172a; margin: 16px 0; }
+    .note { border-left: 4px solid #22d3ee; padding: 12px 16px; background: #0b1220; margin: 16px 0; }
+    .grid { display: grid; gap: 12px; }
+    .footer { margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; color: #94a3b8; font-size: 0.9rem; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; margin-right: 8px; }
+    .level-a { background: #22c55e20; color: #22c55e; }
+    .level-aa { background: #eab30820; color: #eab308; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, monospace; }
+    pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+  </style>
+
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is WordPress automatically ADA compliant for US stores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. WordPress is only the platform. US ADA compliance depends on the live theme, apps, custom code, product media, navigation, forms, and checkout-adjacent flows meeting WCAG 2.2 Level AA expectations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What accessibility issues are common on US WordPress stores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Page builders, duplicate navigation, weak link text, inaccessible plugins, and broken form validation are common WordPress problems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should a US WordPress store fix first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with high-liability templates: homepage, collection pages, product pages, cart, checkout-adjacent flows, account pages, and every app-driven modal or form."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What accessibility issues are common on WordPress stores?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Common issues include block themes and page builders can mix semantic html with inaccessible widgets on the same site. and plugin sprawl often creates duplicate menus, broken modals, and inconsistent form validation. Those defects usually appear on product pages, filters, carts, popups, and forms."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should a brand fix WordPress accessibility problems?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start with an audit of the live storefront, then map which templates come from the theme, the block editor, and builder plugins. and refactor reusable patterns before fixing individual pages created by editors. Prioritize fixes in reusable templates before individual pages."
-      }
-    }
-  ]
-}</script>
+    ]
+  }</script>
+
 </head>
 <body>
+
 <nav><a href="/">← AltorLab</a> · <a href="/compliance/">Platform Guides</a></nav>
 <article>
-<h1>ADA Compliance for WordPress</h1>
-<p><strong>Quick answer:</strong> No. WordPress can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
-<h2>Why WordPress Stores Get Flagged</h2>
-<p>WordPress brands usually get into trouble when rapid merchandising and app installs outrun accessibility QA. A good-looking storefront can still fail WCAG because the real risk sits in filters, carousels, forms, popups, and checkout-adjacent interactions.</p>
-<ul><li>Block themes and page builders can mix semantic HTML with inaccessible widgets on the same site.</li>
-<li>Plugin sprawl often creates duplicate menus, broken modals, and inconsistent form validation.</li>
-<li>Marketing pages built in builders frequently ship poor heading structure, weak link text, and image-based text.</li>
-<li>Commerce, membership, and LMS add-ons can each introduce separate accessibility problems.</li></ul>
-<h2>Apps, Plugins, or Platform Features That Help</h2>
-<p>Helpful tools can speed up detection and clean up content operations, but they do not replace manual testing or component-level remediation.</p>
-<ul><li>WordPress block patterns can encode better headings, landmarks, and CTA structure once fixed.</li>
-<li>Accessible-ready themes reduce baseline risk, though plugins still require review.</li>
-<li>Editorial workflows in WordPress can support accessible alt text, tables, and headings when governance exists.</li>
-<li>WordPress native theme controls</li>
-<li>Manual keyboard and screen-reader QA</li>
-<li>Accessibility-aware design system components</li></ul>
-<h2>How to Remediate WordPress Accessibility Issues</h2>
-<ol><li>Map which templates come from the theme, the block editor, and builder plugins.</li>
-<li>Refactor reusable patterns before fixing individual pages created by editors.</li>
-<li>Screen high-impact plugins for modal, form, and navigation regressions.</li>
-<li>Train content editors to use headings, alt text, table markup, and descriptive links correctly from the CMS.</li></ol>
-<p>Focus first on global templates and installed extensions that repeat across the site. Once navigation, product templates, forms, modals, and cart patterns are fixed, the long tail of content becomes much easier to govern.</p>
-<h2>FAQ</h2>
-<p><strong>Is WordPress automatically ADA compliant?</strong><br>No. WordPress can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
-<p><strong>What accessibility issues are common on WordPress stores?</strong><br>Common issues include block themes and page builders can mix semantic html with inaccessible widgets on the same site. and plugin sprawl often creates duplicate menus, broken modals, and inconsistent form validation. Those defects usually appear on product pages, filters, carts, popups, and forms.</p>
-<p><strong>How should a brand fix WordPress accessibility problems?</strong><br>Start with an audit of the live storefront, then map which templates come from the theme, the block editor, and builder plugins. and refactor reusable patterns before fixing individual pages created by editors. Prioritize fixes in reusable templates before individual pages.</p>
-<p><strong>Want a live audit instead of a checklist?</strong> <a href="https://altorlab.app">Run AltorLab's free ADA compliance scan</a>.</p>
+  <p class="eyebrow">US ecommerce ADA guide</p>
+  <h1>ADA Compliance for WordPress — US Store Guide</h1>
+  <p><strong>Under ADA Title III, all US online stores must be accessible.</strong> If you sell into the United States, your storefront can be evaluated against WCAG 2.2 Level AA even if your platform marketing sounds accessibility-friendly.</p>
+  <div class="note">California accounts for <strong>40% of ADA web lawsuits</strong>. New York and Florida follow. That is why US ecommerce compliance content has to be state-aware, platform-aware, and built around litigation reality.</div>
+  <p>US WordPress stores often pay for accessibility debt twice: once in emergency fixes and again in plugin cleanup to prevent regression. Public US examples also show what can happen at scale: Fashion Nova paid <strong>$5.15 million USD</strong>, and smaller brands still face expensive settlement pressure in USD long before any large headline appears.</p>
+
+  <h2>Why US WordPress stores get flagged</h2>
+  <ul><li>Block themes and page builders often mix semantic HTML with inaccessible widgets on the same store.</li><li>Plugin sprawl creates duplicate menus, broken modals, and inconsistent validation patterns.</li><li>Commerce, membership, and builder add-ons each introduce separate ADA risk for US operators.</li></ul>
+
+  <h2>What US plaintiff firms and testers usually document</h2>
+  <div class="card">
+    <ul>
+      <li>Missing alt text on product imagery and icons.</li>
+      <li>Unlabeled form fields in checkout, signup, and support flows.</li>
+      <li>Keyboard traps in filters, drawers, popups, and mobile menus.</li>
+      <li>Weak color contrast and invisible focus indicators.</li>
+      <li>Broken error messaging and inaccessible account recovery forms.</li>
+    </ul>
+  </div>
+
+  <h2>US remediation priorities for WordPress</h2>
+  <ol><li>Map which templates come from the theme, block editor, WooCommerce, and builder plugins.</li><li>Refactor reusable patterns before fixing individual editor-built pages.</li><li>Screen high-impact plugins for modal, form, and navigation regressions.</li><li>Train editors on headings, alt text, tables, and descriptive links.</li></ol>
+  <p>For US operators, the key is not only fixing defects. It is proving repeatable remediation across reusable templates so the same issue does not return after the next launch.</p>
+
+  <h2>What standard matters in the United States?</h2>
+  <p>In the US, <strong>WCAG 2.2 Level AA is the de facto standard for ADA compliance</strong>. Courts, demand letters, consultants, and settlements usually talk about barriers in product discovery, forms, keyboard flow, focus indicators, and alternative text. Those issues map directly to WCAG requirements.</p>
+
+  <h2>FAQ</h2>
+  <p><strong>Is WordPress automatically ADA compliant for US stores?</strong><br>No. The platform helps only if the live storefront, apps, content, and custom code are accessible.</p>
+  <p><strong>What accessibility issues are common on US WordPress stores?</strong><br>Page builders, duplicate navigation, weak link text, inaccessible plugins, and broken form validation are common WordPress problems.</p>
+  <p><strong>What should a US WordPress store fix first?</strong><br>Start with product pages, cart, checkout-adjacent flows, account pages, popups, search, and filters because those produce both legal risk and direct revenue loss.</p>
+  <p><strong>Check if your US WordPress store is compliant →</strong> <a href="https://altorlab.app">Free scan</a></p>
 </article>
-<footer class="footer"><a href="/compliance/">All platform guides</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a></footer>
+<footer class="footer"><a href="/compliance/">All platform guides</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab ADA Compliance — Serving US D2C brands</a></footer>
+
 </body>
 </html>

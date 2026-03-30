@@ -5,140 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="geo.placename" content="United States" />
   <meta name="geo.region" content="US" />
-  <title>Shopify ADA Compliance Checklist for 2026</title>
-  <meta name="description" content="Shopify stores face heavy ADA claims. Use this step-by-step checklist to find barriers now and reduce lawsuit risk before demand letters." />
+  <title>US Shopify ADA Compliance Checklist for 2026 | AltorLab</title>
+  <meta name="description" content="ADA compliance checklist for US Shopify stores. Learn the most common litigation triggers, US lawsuit data, and what to fix first." />
   <link rel="canonical" href="https://altorlab.app/blog/shopify-ada-compliance.html" />
   <link rel="alternate" hreflang="en-us" href="https://altorlab.app/blog/shopify-ada-compliance.html" />
-  <meta property="og:title" content="Is Your Shopify Store ADA Compliant? Here's How to Check" />
-  <meta property="og:description" content="Shopify represented a major share of 2025 filings. Learn the exact issues plaintiff firms look for." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://altorlab.app/blog/shopify-ada-compliance.html" />
-  <meta property="og:image" content="https://altorlab.app/og-image.svg" />
-  <meta property="og:locale" content="en_US" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shopify ADA Compliance — How to Check" />
-  <meta name="twitter:description" content="Shopify stores are frequent ADA targets. Fix critical blockers before they become legal evidence." />
-  <meta name="twitter:image" content="https://altorlab.app/og-image.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Is Your Shopify Store ADA Compliant? Here's How to Check","author":{"@type":"Organization","name":"AltorLab"},"publisher":{"@type":"Organization","name":"AltorLab"},"datePublished":"2026-03-23","dateModified":"2026-03-23","mainEntityOfPage":"https://altorlab.app/blog/shopify-ada-compliance.html","image":"https://altorlab.app/og-image.svg"}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are Shopify stores targeted so often?","acceptedAnswer":{"@type":"Answer","text":"Shopify stores are common and often reuse similar themes and app patterns, making repeat accessibility defects easy to find and document."}},{"@type":"Question","name":"Which Shopify pages should be tested first?","acceptedAnswer":{"@type":"Answer","text":"Homepage, collections, product page templates, cart, and every checkout-adjacent flow should be tested first due to legal and revenue impact."}},{"@type":"Question","name":"Do Shopify apps guarantee ADA compliance?","acceptedAnswer":{"@type":"Answer","text":"No. Apps may help with workflow, but code-level WCAG issues still require testing and remediation."}},{"@type":"Question","name":"How often should Shopify stores scan for accessibility?","acceptedAnswer":{"@type":"Answer","text":"At minimum after every major theme or app update, with weekly or continuous scans for fast-moving stores."}},{"@type":"Question","name":"Can I reduce risk without rebuilding my store?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most teams start with targeted remediation of high-impact blockers before broader component refactoring."}}]}</script>
+
   <style>
-    body{margin:0;background:#080b12;color:#e5e7eb;font-family:'IBM Plex Sans',sans-serif;line-height:1.75}
-    main{max-width:920px;margin:0 auto;padding:48px 20px 80px}
-    h1,h2,h3{line-height:1.25;color:#f8fafc} a{color:#7dd3fc}
-    .eyebrow{font-family:'IBM Plex Mono',monospace;color:#93c5fd;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}
-    .cta{display:inline-block;background:#22d3ee;color:#082f49;padding:12px 18px;border-radius:10px;font-weight:700;text-decoration:none;margin:18px 0}
-    .card{background:#0f172a;border:1px solid #1f2937;border-radius:12px;padding:16px}
+    :root { color-scheme: dark; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 840px; margin-inline: auto; padding: 20px; line-height: 1.72; color: #e5e7eb; background: #0a0a0a; }
+    h1 { font-size: 1.95rem; color: #f8fafc; line-height: 1.2; }
+    h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+    h3 { color: #f8fafc; }
+    p, li { font-size: 1rem; }
+    a { color: #7dd3fc; }
+    ul, ol { padding-left: 20px; }
+    .eyebrow { color: #93c5fd; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+    .cta { display: inline-block; margin: 18px 0 26px; background: #22d3ee; color: #082f49; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+    .card { border: 1px solid #1f2937; border-radius: 12px; padding: 18px; background: #0f172a; margin: 16px 0; }
+    .note { border-left: 4px solid #22d3ee; padding: 12px 16px; background: #0b1220; margin: 16px 0; }
+    .grid { display: grid; gap: 12px; }
+    .footer { margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; color: #94a3b8; font-size: 0.9rem; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; margin-right: 8px; }
+    .level-a { background: #22c55e20; color: #22c55e; }
+    .level-aa { background: #eab30820; color: #eab308; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, monospace; }
+    pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
   </style>
+
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Is Your US Shopify Store ADA Compliant? Here's How to Check","author":{"@type":"Organization","name":"AltorLab"},"publisher":{"@type":"Organization","name":"AltorLab"},"datePublished":"2026-03-23","dateModified":"2026-03-30","mainEntityOfPage":"https://altorlab.app/blog/shopify-ada-compliance.html","image":"https://altorlab.app/og-image.svg"}</script>
+
 </head>
 <body>
-<main>
-  <p class="eyebrow">Shopify ADA Compliance</p>
-  <h1>Is Your Shopify Store ADA Compliant? Here's How to Check</h1>
-  <p>Shopify success can create a hidden legal problem: visibility. As your store scales, your templates, apps, and checkout pathways become a large attack surface for accessibility claims. In 2025 litigation summaries, Shopify-powered stores were repeatedly cited as a major share of e-commerce ADA filings, including estimates near <strong>32% of tracked cases</strong>. Combined with broader tracking that places e-commerce around <strong>77% of website accessibility suits</strong>, that makes Shopify one of the first platforms plaintiff firms review.</p>
-  <p>This does not mean Shopify is inherently non-compliant. It means fast-moving brands ship fast, stack conversion apps, and inherit accessibility debt unless they audit continuously. Many teams discover the risk only after receiving a demand letter that points to unlabeled inputs, inaccessible modals, or missing alt text on product imagery.</p>
-  <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
 
-  <h2>Why Shopify stores are a frequent legal target</h2>
+<main>
+  <p class="eyebrow">US Shopify ADA compliance</p>
+  <h1>Is Your US Shopify Store ADA Compliant? Here's How to Check</h1>
+  <p><strong>US Shopify stores</strong> are one of the clearest litigation targets in ecommerce. In 2025 lawsuit summaries, Shopify-powered stores represented roughly <strong>32% of tracked ADA website cases</strong>, while ecommerce overall represented about <strong>77% of US filings</strong>. That does not mean Shopify is inherently inaccessible. It means US plaintiff firms know exactly where Shopify stores tend to break: apps, swatches, drawers, modals, forms, and promotional themes shipped at high velocity.</p>
+  <p>For a US operator, the goal is not a vague accessibility score. It is to reduce ADA Title III exposure on the live storefront by fixing defects in revenue-critical templates before they become evidence in a demand letter.</p>
+  <a class="cta" href="https://altorlab.app">Free ADA Scan — Check Your US Store Now</a>
+
+  <h2>Why US Shopify stores are targeted so often</h2>
   <ul>
-    <li><strong>Theme and app reuse:</strong> one defect can appear across hundreds of pages.</li>
-    <li><strong>Dynamic UX:</strong> product options, subscription widgets, and popup funnels are common accessibility failure zones.</li>
-    <li><strong>Checkout-adjacent complexity:</strong> discounts, shipping calculators, and account gates introduce form and focus issues.</li>
-    <li><strong>High traffic:</strong> successful stores create stronger damages narratives and settlement pressure.</li>
+    <li><strong>Theme reuse:</strong> one broken component can affect hundreds of product pages.</li>
+    <li><strong>App density:</strong> reviews, subscriptions, search, bundles, quizzes, and popups add hidden WCAG failures.</li>
+    <li><strong>Checkout-adjacent complexity:</strong> carts, discounts, account flows, and address validation create form and focus problems.</li>
+    <li><strong>Visibility:</strong> successful US Shopify stores are easy to discover and test.</li>
   </ul>
 
-  <h2>Most common Shopify accessibility violations</h2>
+  <h2>Most common issues on US Shopify stores</h2>
   <div class="card">
-    <h3>1) Missing or weak alt text</h3>
-    <p>Product images with generic labels like "image1" or empty alt text block understanding for non-visual users and trigger WCAG 1.1.1 concerns.</p>
-    <h3>2) Unlabeled form fields</h3>
-    <p>Email capture, checkout address fields, and discount code inputs often rely on placeholders instead of semantic labels.</p>
-    <h3>3) Poor color contrast</h3>
-    <p>Campaign themes frequently use low-contrast text in banners and promo badges, violating readability thresholds.</p>
-    <h3>4) Broken keyboard navigation</h3>
-    <p>Slide-out carts, quick-view modals, and mega menus can trap focus or skip interactive elements.</p>
-    <h3>5) Non-descriptive links and buttons</h3>
-    <p>Repeated "Learn more" links and icon-only controls create ambiguity for screen-reader users.</p>
+    <h3>1) Missing alt text on product imagery</h3>
+    <p>US Shopify stores often rely on image-heavy PDPs where alt text is empty, duplicated, or meaningless.</p>
+    <h3>2) Unlabeled selectors and swatches</h3>
+    <p>Variant swatches, quantity steppers, and custom bundle controls frequently expose no reliable name, role, or state.</p>
+    <h3>3) Broken keyboard flow</h3>
+    <p>Mini-carts, mega menus, quick views, and popup funnels often trap focus or hide active elements.</p>
+    <h3>4) Weak error handling</h3>
+    <p>Discount code fields, login forms, and account recovery paths often fail WCAG error identification expectations.</p>
+    <h3>5) Low contrast in campaign themes</h3>
+    <p>US seasonal launches commonly introduce pale promo text that fails readability thresholds.</p>
   </div>
 
-  <h2>Step-by-step Shopify compliance checklist</h2>
-  <h3>Step 1: Audit critical templates first</h3>
-  <p>Scan homepage, collection template, product template, cart, account login/register pages, and post-purchase flows. These are highest-risk for both litigation and revenue loss.</p>
-  <h3>Step 2: Run keyboard-only tests</h3>
-  <p>Navigate every core funnel using Tab, Shift+Tab, Enter, and Escape. Verify visible focus state, logical order, and modal close behavior.</p>
+  <h2>Checklist for a US Shopify store</h2>
+  <h3>Step 1: Audit the live storefront</h3>
+  <p>Test homepage, collections, product templates, cart, account pages, and every popup or embedded app on the production site.</p>
+  <h3>Step 2: Run keyboard-only testing</h3>
+  <p>Verify menus, swatches, drawers, modals, and filters can all be opened, used, and closed without a mouse.</p>
   <h3>Step 3: Validate form semantics</h3>
-  <p>Every input needs an explicit label, clear error messaging, and programmatic relationship between helper text and control.</p>
-  <h3>Step 4: Fix media and document accessibility</h3>
-  <p>Caption product videos, provide transcript alternatives where appropriate, and avoid inaccessible PDF-only policy pages.</p>
-  <h3>Step 5: Build regression checks into release workflow</h3>
-  <p>Any new app, theme update, or campaign page should trigger automated and manual accessibility checks before launch.</p>
+  <p>Every input needs a label, accessible errors, and a clear relationship between helper copy and the control.</p>
+  <h3>Step 4: Fix reusable sections first</h3>
+  <p>Patch theme sections and snippets before individual products so the same issue disappears everywhere.</p>
+  <h3>Step 5: Monitor every app update</h3>
+  <p>US Shopify stores drift out of compliance fastest through app installs and merchant-led campaign changes.</p>
 
-  <h2>Shopify apps that can help (with limits)</h2>
-  <p>Accessibility apps can support workflow by flagging common defects, generating reports, or aiding policy communication. But apps do <strong>not</strong> replace code-level remediation. If your theme template uses inaccessible markup, no floating widget will rewrite your DOM semantics, heading structure, or focus model comprehensively. Use apps as support tooling, not legal insulation.</p>
+  <h2>US lawsuit economics for Shopify operators</h2>
+  <p>Many US Shopify teams discover accessibility only after receiving a demand letter. By then, the cost is no longer just engineering time. It can include attorney fees, settlement pressure, consultant work, and delayed launches. Even a relatively small claim can cost far more than proactive monitoring.</p>
 
-  <h2>Operational model that works for D2C teams</h2>
-  <p>The most reliable pattern is three-track ownership:</p>
-  <ul>
-    <li><strong>Engineering:</strong> fix semantic and interactive defects in theme and custom components.</li>
-    <li><strong>Design:</strong> enforce color contrast, state visibility, and component accessibility specs.</li>
-    <li><strong>Growth/Marketing:</strong> keep landing pages, popup funnels, and promo modules compliant at launch.</li>
-  </ul>
-  <p>Without explicit ownership, issues recur after every campaign sprint. With ownership, compliance becomes part of release hygiene and conversion quality.</p>
+  <h2>What standard matters in the United States?</h2>
+  <p>In the US, <strong>WCAG 2.2 Level AA is the de facto standard for ADA compliance</strong>. That is the benchmark most often used in US audits, settlement language, and expert reviews involving online stores.</p>
 
-  <h2>30-day Shopify remediation sprint (practical plan)</h2>
-  <h3>Week 1: baseline assessment</h3>
-  <p>Scan top-traffic templates and run manual keyboard walkthroughs for homepage, collection, product, cart, and account pages. Capture reproducible evidence with page URL, component name, and severity rating.</p>
-  <h3>Week 2: critical fixes</h3>
-  <p>Address checkout-adjacent form labels, focus management in drawers/modals, and inaccessible variant selectors. These defects often create both legal risk and direct conversion loss.</p>
-  <h3>Week 3: app conflict cleanup</h3>
-  <p>Review popup, recommendation, and subscription apps. Remove or replace modules that repeatedly break keyboard flow or semantic structure. Stabilize CSS/JS overrides that hide focus indicators.</p>
-  <h3>Week 4: regression controls</h3>
-  <p>Add accessibility checks to theme deployment process. Require sign-off for campaign pages and app installations. Publish monthly defect trends so leadership sees progress and exposure.</p>
-
-  <h2>Shopify-specific high-risk zones to monitor continuously</h2>
-  <ul>
-    <li>Product-card image and badge components across collection grids.</li>
-    <li>Search and filtering interfaces with dynamic result updates.</li>
-    <li>Mini-cart drawers and quick-view modals.</li>
-    <li>Email/SMS capture forms and exit-intent popups.</li>
-    <li>Internationalization controls (currency/language selectors) for keyboard and screen-reader behavior.</li>
-  </ul>
-  <p>Monitoring these zones consistently is how high-growth Shopify brands keep compliance from drifting while still shipping quickly.</p>
-
-  <h2>Internal reading</h2>
-  <ul>
-    <li><a href="/blog/ada-lawsuits-2026.html">ADA Compliance Lawsuits 2026 — What D2C Brands Need to Know</a></li>
-    <li><a href="/blog/ada-compliance-cost.html">ADA Compliance Cost — How Much Does It Really Cost?</a></li>
-    <li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li>
-  </ul>
-
-  <h2>FAQs</h2>
-  <h3>Does Shopify checkout itself remove all risk?</h3>
-  <p>No. Risk often sits in theme code and checkout-adjacent user flows, not only in payment processing screens.</p>
-  <h3>Can I pass compliance with only automated testing?</h3>
-  <p>No. Automated scans catch a subset of issues; manual keyboard and assistive-tech validation remains essential.</p>
-  <h3>How soon should critical issues be fixed?</h3>
-  <p>Immediately for blockers in purchasing and account paths, then schedule iterative releases for secondary defects.</p>
-  <h3>Is legal review necessary?</h3>
-  <p>For active demand letters or lawsuits, yes. Technical remediation and legal strategy should run in parallel.</p>
-
-  <h2>Sources</h2>
-  <ul>
-    <li>Industry lawsuit trend reporting for 2025 website accessibility filings and platform mix.</li>
-    <li>W3C WCAG 2.1/2.2 guidelines for technical criteria.</li>
-    <li>DOJ ADA digital accessibility guidance for public-facing services.</li>
-  </ul>
-
-  <h2>Related articles</h2>
-  <ul>
-    <li><a href="/blog/ada-lawsuits-2026.html">ADA Compliance Lawsuits 2026 — What D2C Brands Need to Know</a></li>
-    <li><a href="/blog/ada-compliance-mistakes.html">Top 10 ADA Compliance Mistakes D2C Brands Make</a></li>
-    <li><a href="/blog/ecommerce-accessibility-compliance.html">E-Commerce Accessibility Compliance — The Complete 2026 Guide</a></li>
-  </ul>
-
-  <a class="cta" href="https://altorlab.app">Scan Your Store Free →</a>
+  <h2>FAQ</h2>
+  <p><strong>Are US Shopify stores automatically ADA compliant?</strong><br>No. Shopify is only the platform. Your live theme, apps, content, and custom code still determine compliance risk.</p>
+  <p><strong>What should a US Shopify store test first?</strong><br>Homepage, collection templates, product templates, cart, account pages, popups, search, and all checkout-adjacent flows.</p>
+  <p><strong>Can Shopify apps guarantee compliance?</strong><br>No. Apps can help with workflow, but code-level barriers still require testing and remediation.</p>
+  <p><strong>How often should a US Shopify store scan?</strong><br>After every major theme or app update, and continuously if the store ships weekly merchandising changes.</p>
 </main>
+
 </body>
 </html>

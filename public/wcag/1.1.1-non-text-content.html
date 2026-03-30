@@ -1,105 +1,83 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="geo.placename" content="United States" />
-<link rel="alternate" hreflang="en-us" href="https://altorlab.app/wcag/1.1.1-non-text-content.html">
-<title>WCAG 1.1.1 Non-text Content — ADA Compliance Guide | AltorLab</title>
-<meta name="description" content="Non-text Content explained for ecommerce sites. Learn what WCAG 1.1.1 requires, common violations on Shopify/WooCommerce, and how to fix them.">
-<meta name="geo.region" content="US" />
-<link rel="canonical" href="https://altorlab.app/wcag/1.1.1-non-text-content.html">
-<style>
-body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
-h1 { font-size: 1.8rem; color: #f5f5f5; }
-h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
-a { color: #60a5fa; }
-.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
-.level-a { background: #22c55e20; color: #22c55e; }
-.level-aa { background: #eab30820; color: #eab308; }
-.level-aaa { background: #ef444420; color: #ef4444; }
-pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
-code { font-family: ui-monospace, SFMono-Regular, monospace; }
-ul, ol { padding-left: 20px; }
-.card-grid { display: grid; gap: 12px; }
-.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
-.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is WCAG 1.1.1?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Meaningful images, icons, and controls need text alternatives so shoppers using assistive tech get the same information."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How does WCAG 1.1.1 affect ecommerce sites?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It affects ecommerce anywhere shoppers interact with product gallery images ship with empty or missing alt attributes. and color swatch buttons are announced as unlabeled buttons instead of 'black, size medium'. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How to fix WCAG 1.1.1 violations?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start by auditing the live storefront, then Write alt text that communicates the same decision-making value a sighted shopper gets.; Give icon buttons and swatches an accessible name with visible context or aria-label.; Repeat offer copy in real HTML near the image so it is searchable and readable.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages."
-      }
-    }
-  ]
-}
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="geo.placename" content="United States" />
+  <meta name="geo.region" content="US" />
+  <title>WCAG 1.1.1: Non-text Content — US ADA Compliance Guide | AltorLab</title>
+  <meta name="description" content="US ecommerce guide to WCAG 1.1.1 Non-text Content, with ADA lawsuit context, common storefront failures, and remediation steps." />
+  <link rel="canonical" href="https://altorlab.app/wcag/1.1.1-non-text-content.html" />
+  <link rel="alternate" hreflang="en-us" href="https://altorlab.app/wcag/1.1.1-non-text-content.html" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 840px; margin-inline: auto; padding: 20px; line-height: 1.72; color: #e5e7eb; background: #0a0a0a; }
+    h1 { font-size: 1.95rem; color: #f8fafc; line-height: 1.2; }
+    h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+    h3 { color: #f8fafc; }
+    p, li { font-size: 1rem; }
+    a { color: #7dd3fc; }
+    ul, ol { padding-left: 20px; }
+    .eyebrow { color: #93c5fd; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+    .cta { display: inline-block; margin: 18px 0 26px; background: #22d3ee; color: #082f49; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+    .card { border: 1px solid #1f2937; border-radius: 12px; padding: 18px; background: #0f172a; margin: 16px 0; }
+    .note { border-left: 4px solid #22d3ee; padding: 12px 16px; background: #0b1220; margin: 16px 0; }
+    .grid { display: grid; gap: 12px; }
+    .footer { margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; color: #94a3b8; font-size: 0.9rem; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; margin-right: 8px; }
+    .level-a { background: #22c55e20; color: #22c55e; }
+    .level-aa { background: #eab30820; color: #eab308; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, monospace; }
+    pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+  </style>
+
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What is WCAG 1.1.1?", "acceptedAnswer": {"@type": "Answer", "text": "Meaningful images, icons, and controls need text alternatives so US shoppers using assistive technology get the same information."}},
+      {"@type": "Question", "name": "Why does this matter for US ecommerce ADA compliance?", "acceptedAnswer": {"@type": "Answer", "text": "This criterion is frequently cited in US ADA lawsuits because product images, color swatches, trust badges, and promo graphics often carry information that blind shoppers cannot access when alt text is missing or generic."}},
+      {"@type": "Question", "name": "What standard do US online stores use?", "acceptedAnswer": {"@type": "Answer", "text": "In the US, WCAG 2.2 Level AA is the de facto standard used to evaluate ADA compliance for online stores."}}
+    ]
+  }</script>
+
 </head>
 <body>
+
 <nav><a href="/">← AltorLab</a> · <a href="/wcag/">WCAG Guide</a></nav>
 <article>
-<h1>WCAG 1.1.1: Non-text Content</h1>
-<span class="badge level-a">Level A</span>
-<p><strong>Quick answer:</strong> Meaningful images, icons, and controls need text alternatives so shoppers using assistive tech get the same information.</p>
-<h2>What This Means</h2>
-<p>On ecommerce sites, Non-text Content usually shows up in repeating storefront components such as product cards, PDP media, search results, cart drawers, checkout forms, and support content. If the live experience depends on patterns like product gallery images ship with empty or missing alt attributes. or color swatch buttons are announced as unlabeled buttons instead of &#x27;black, size medium&#x27;., disabled shoppers can lose context or get blocked before purchase.</p>
-<p>This criterion matters because D2C teams often fix the homepage but miss reusable app blocks, campaign pages, and mobile-specific UI. The practical standard is simple: build the same outcome for keyboard users, screen-reader users, low-vision users, and anyone relying on captions, labels, structure, or predictable behavior.</p>
-<p>For Shopify, WooCommerce, and custom storefronts, the fastest remediation path is usually template-level work. Fix the repeated component once, then retest every place it appears across browse, buy, and post-purchase journeys.</p>
-<h2>Common Violations on Ecommerce Sites</h2>
-<ul>
-<li>Product gallery images ship with empty or missing alt attributes.</li>
-<li>Color swatch buttons are announced as unlabeled buttons instead of &#x27;Black, size medium&#x27;.</li>
-<li>Promo banners use embedded text like &#x27;Buy 2 Get 1&#x27; with no equivalent HTML text.</li>
-<li>Icon-only trust badges and wishlist buttons have no accessible name.</li>
-</ul>
-<h2>How to Fix It</h2>
-<p>Start with the live customer journey, not isolated components in Storybook or Figma. Audit the problem on category pages, product detail pages, quick views, cart, checkout, account, and help templates.</p>
-<ol>
-<li>Write alt text that communicates the same decision-making value a sighted shopper gets.</li>
-<li>Give icon buttons and swatches an accessible name with visible context or aria-label.</li>
-<li>Repeat offer copy in real HTML near the image so it is searchable and readable.</li>
-<li>Mark decorative flourishes with alt=&#x27;&#x27; so screen readers skip noise.</li>
-</ol>
-<p>On Shopify, fix the theme section or app block that repeats the defect. On WooCommerce and WordPress, update the template override or plugin output. In custom React or headless storefronts, move the fix into shared components so merchandisers cannot reintroduce the issue with every campaign.</p>
-<h2>Code Example</h2>
-<pre><code>&lt;!-- Before --&gt;
-&lt;img src=&quot;/products/linen-shirt.jpg&quot;&gt;
+  <h1>WCAG 1.1.1: Non-text Content</h1>
+  <span class="badge level-a">Level A</span>
+  <p><strong>Quick answer:</strong> Meaningful images, icons, and controls need text alternatives so US shoppers using assistive technology get the same information.</p>
+  <div class="note"><strong>This criterion is frequently cited in US ADA lawsuits.</strong> This criterion is frequently cited in US ADA lawsuits because product images, color swatches, trust badges, and promo graphics often carry information that blind shoppers cannot access when alt text is missing or generic.</div>
+  <p><strong>In the US, WCAG 2.2 Level AA is the de facto standard for ADA compliance.</strong> That is why this criterion matters for Shopify, WooCommerce, Magento, Wix, Squarespace, Webflow, BigCommerce, and custom storefronts selling to US consumers.</p>
+
+  <h2>Why this criterion matters in US cases</h2>
+  <p>US cases and complaints involving retailers such as National Federation of the Blind v. Target and Robles v. Domino's consistently put inaccessible product information and task completion in focus. WCAG 1.1.1 is often part of that discussion because image-heavy storefronts fail without strong text alternatives.</p>
+
+  <h2>Common violations on US ecommerce sites</h2>
+  <ul><li>Product gallery images have empty or generic alt text.</li><li>Color swatches are announced only as unlabeled buttons.</li><li>Promo graphics contain sale terms in the image with no equivalent HTML text.</li><li>Icon-only wishlist, trust, and account buttons have no accessible name.</li></ul>
+
+  <h2>How to fix it</h2>
+  <ol><li>Write alt text that carries the same decision-making value a sighted shopper receives.</li><li>Give swatches and icon buttons an accessible name that matches visible context.</li><li>Repeat offer language in HTML near the image so it is searchable and readable.</li><li>Mark decorative images as empty alt only when they truly add no meaning.</li></ol>
+  <p>Start with the live customer journey, not design mocks. Audit homepage, collection, product, cart, account, and checkout-adjacent flows first because those pages create both legal risk and direct revenue loss.</p>
+
+  <h2>Code example</h2>
+  <pre><code>&lt;!-- Before --&gt;
+&lt;img src="/products/linen-shirt.jpg"&gt;
 
 &lt;!-- After --&gt;
-&lt;img src=&quot;/products/linen-shirt.jpg&quot; alt=&quot;Front view of the navy linen shirt with chest pocket&quot;&gt;</code></pre>
-<section>
-<h2>FAQ</h2>
-<p><strong>What is WCAG 1.1.1?</strong><br>Meaningful images, icons, and controls need text alternatives so shoppers using assistive tech get the same information.</p>
-<p><strong>How does WCAG 1.1.1 affect ecommerce sites?</strong><br>It affects ecommerce anywhere shoppers interact with product gallery images ship with empty or missing alt attributes. and color swatch buttons are announced as unlabeled buttons instead of &#x27;black, size medium&#x27;. If those patterns are inaccessible, customers can miss product information, fail forms, or abandon checkout.</p>
-<p><strong>How to fix WCAG 1.1.1 violations?</strong><br>Start by auditing the live storefront, then Write alt text that communicates the same decision-making value a sighted shopper gets.; Give icon buttons and swatches an accessible name with visible context or aria-label.; Repeat offer copy in real HTML near the image so it is searchable and readable.. Prioritize templates and apps that repeat the issue across product, cart, checkout, and account pages.</p>
-</section>
-<p><strong>Check if your store passes WCAG 1.1.1 →</strong> <a href="https://altorlab.app">Free ADA Compliance Scan</a></p>
+&lt;img src="/products/linen-shirt.jpg" alt="Front view of the navy linen shirt with chest pocket"&gt;</code></pre>
+
+  <h2>FAQ</h2>
+  <p><strong>What is WCAG 1.1.1?</strong><br>Meaningful images, icons, and controls need text alternatives so US shoppers using assistive technology get the same information.</p>
+  <p><strong>Why does this matter for US ecommerce ADA compliance?</strong><br>This criterion is frequently cited in US ADA lawsuits because product images, color swatches, trust badges, and promo graphics often carry information that blind shoppers cannot access when alt text is missing or generic.</p>
+  <p><strong>What standard do US online stores use?</strong><br>In the US, WCAG 2.2 Level AA is the de facto standard used to evaluate ADA compliance for ecommerce sites.</p>
+  <p><strong>Check if your US store passes WCAG 1.1.1 →</strong> <a href="https://altorlab.app">Free ADA Scan — Check Your US Store Now</a></p>
 </article>
-<footer class="footer">
-<a href="/wcag/">All WCAG Criteria</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a>
-</footer>
+<footer class="footer"><a href="/wcag/">All WCAG criteria</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a></footer>
+
 </body>
 </html>

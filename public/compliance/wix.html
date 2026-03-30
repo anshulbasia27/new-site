@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="geo.placename" content="United States" />
-<link rel="alternate" hreflang="en-us" href="https://altorlab.app/compliance/wix.html">
-<title>ADA Compliance for Wix — Complete Guide | AltorLab</title>
-<meta name="description" content="ADA compliance guide for Wix stores. Learn the most common accessibility violations, platform-specific remediation steps, and tools that help.">
-<meta name="geo.region" content="US" />
-<link rel="canonical" href="https://altorlab.app/compliance/wix.html">
-<style>body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.7; color: #e0e0e0; background: #0a0a0a; }
-h1 { font-size: 1.8rem; color: #f5f5f5; }
-h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
-a { color: #60a5fa; }
-.badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin-right: 8px; }
-.level-a { background: #22c55e20; color: #22c55e; }
-.level-aa { background: #eab30820; color: #eab308; }
-.level-aaa { background: #ef444420; color: #ef4444; }
-pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
-code { font-family: ui-monospace, SFMono-Regular, monospace; }
-ul, ol { padding-left: 20px; }
-.card-grid { display: grid; gap: 12px; }
-.card { border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; background: #111111; }
-.footer { margin-top:2rem;border-top:1px solid #333;padding-top:1rem;color:#888;font-size:0.85rem; }</style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Is Wix automatically ADA compliant?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Wix can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements."
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="geo.placename" content="United States" />
+  <meta name="geo.region" content="US" />
+  <title>ADA Compliance for Wix — US Store Guide | AltorLab</title>
+  <meta name="description" content="US ADA compliance guide for Wix stores with ADA Title III context, WCAG 2.2 expectations, and mobile/desktop remediation priorities." />
+  <link rel="canonical" href="https://altorlab.app/compliance/wix.html" />
+  <link rel="alternate" hreflang="en-us" href="https://altorlab.app/compliance/wix.html" />
+
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 840px; margin-inline: auto; padding: 20px; line-height: 1.72; color: #e5e7eb; background: #0a0a0a; }
+    h1 { font-size: 1.95rem; color: #f8fafc; line-height: 1.2; }
+    h2 { font-size: 1.3rem; color: #60a5fa; margin-top: 2rem; }
+    h3 { color: #f8fafc; }
+    p, li { font-size: 1rem; }
+    a { color: #7dd3fc; }
+    ul, ol { padding-left: 20px; }
+    .eyebrow { color: #93c5fd; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+    .cta { display: inline-block; margin: 18px 0 26px; background: #22d3ee; color: #082f49; padding: 12px 18px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+    .card { border: 1px solid #1f2937; border-radius: 12px; padding: 18px; background: #0f172a; margin: 16px 0; }
+    .note { border-left: 4px solid #22d3ee; padding: 12px 16px; background: #0b1220; margin: 16px 0; }
+    .grid { display: grid; gap: 12px; }
+    .footer { margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; color: #94a3b8; font-size: 0.9rem; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; margin-right: 8px; }
+    .level-a { background: #22c55e20; color: #22c55e; }
+    .level-aa { background: #eab30820; color: #eab308; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, monospace; }
+    pre { background: #111827; border: 1px solid #374151; border-radius: 8px; padding: 16px; overflow-x: auto; }
+  </style>
+
+
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Wix automatically ADA compliant for US stores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Wix is only the platform. US ADA compliance depends on the live theme, apps, custom code, product media, navigation, forms, and checkout-adjacent flows meeting WCAG 2.2 Level AA expectations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What accessibility issues are common on US Wix stores?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Small touch targets, app-driven modals, poor heading order, and weak focus visibility are common Wix defects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should a US Wix store fix first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with high-liability templates: homepage, collection pages, product pages, cart, checkout-adjacent flows, account pages, and every app-driven modal or form."
+        }
       }
-    },
-    {
-      "@type": "Question",
-      "name": "What accessibility issues are common on Wix stores?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Common issues include drag-and-drop design can create inconsistent heading order, small touch targets, and decorative clutter around checkout flows. and apps added from the wix marketplace can introduce unlabeled buttons, popups, and chat widgets. Those defects usually appear on product pages, filters, carts, popups, and forms."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How should a brand fix Wix accessibility problems?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start with an audit of the live storefront, then audit the live mobile and desktop versions separately because wix layouts can diverge. and normalize typography, color, and button hit area in global design settings. Prioritize fixes in reusable templates before individual pages."
-      }
-    }
-  ]
-}</script>
+    ]
+  }</script>
+
 </head>
 <body>
+
 <nav><a href="/">← AltorLab</a> · <a href="/compliance/">Platform Guides</a></nav>
 <article>
-<h1>ADA Compliance for Wix</h1>
-<p><strong>Quick answer:</strong> No. Wix can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
-<h2>Why Wix Stores Get Flagged</h2>
-<p>Wix brands usually get into trouble when rapid merchandising and app installs outrun accessibility QA. A good-looking storefront can still fail WCAG because the real risk sits in filters, carousels, forms, popups, and checkout-adjacent interactions.</p>
-<ul><li>Drag-and-drop design can create inconsistent heading order, small touch targets, and decorative clutter around checkout flows.</li>
-<li>Apps added from the Wix marketplace can introduce unlabeled buttons, popups, and chat widgets.</li>
-<li>Mobile editor adjustments sometimes create focus-obscuring sticky elements or hidden content.</li>
-<li>Custom interactions and animation effects may ignore reduced-motion and keyboard expectations.</li></ul>
-<h2>Apps, Plugins, or Platform Features That Help</h2>
-<p>Helpful tools can speed up detection and clean up content operations, but they do not replace manual testing or component-level remediation.</p>
-<ul><li>Wix accessibility settings cover basics like alt text and page language, but they do not fix custom app code.</li>
-<li>Reusable design presets can improve button sizing, contrast, and heading consistency across pages.</li>
-<li>Wix forms and stores components are easier to harden than arbitrary embedded widgets.</li>
-<li>Wix native theme controls</li>
-<li>Manual keyboard and screen-reader QA</li>
-<li>Accessibility-aware design system components</li></ul>
-<h2>How to Remediate Wix Accessibility Issues</h2>
-<ol><li>Audit the live mobile and desktop versions separately because Wix layouts can diverge.</li>
-<li>Normalize typography, color, and button hit area in global design settings.</li>
-<li>Replace or remove marketplace apps that create focus, labeling, or modal problems.</li>
-<li>Retest animated interactions and sticky mobile UI after every marketing campaign update.</li></ol>
-<p>Focus first on global templates and installed extensions that repeat across the site. Once navigation, product templates, forms, modals, and cart patterns are fixed, the long tail of content becomes much easier to govern.</p>
-<h2>FAQ</h2>
-<p><strong>Is Wix automatically ADA compliant?</strong><br>No. Wix can provide a usable foundation, but compliance depends on the live theme, apps, custom code, content, and checkout-related flows meeting WCAG requirements.</p>
-<p><strong>What accessibility issues are common on Wix stores?</strong><br>Common issues include drag-and-drop design can create inconsistent heading order, small touch targets, and decorative clutter around checkout flows. and apps added from the wix marketplace can introduce unlabeled buttons, popups, and chat widgets. Those defects usually appear on product pages, filters, carts, popups, and forms.</p>
-<p><strong>How should a brand fix Wix accessibility problems?</strong><br>Start with an audit of the live storefront, then audit the live mobile and desktop versions separately because wix layouts can diverge. and normalize typography, color, and button hit area in global design settings. Prioritize fixes in reusable templates before individual pages.</p>
-<p><strong>Want a live audit instead of a checklist?</strong> <a href="https://altorlab.app">Run AltorLab's free ADA compliance scan</a>.</p>
+  <p class="eyebrow">US ecommerce ADA guide</p>
+  <h1>ADA Compliance for Wix — US Store Guide</h1>
+  <p><strong>Under ADA Title III, all US online stores must be accessible.</strong> If you sell into the United States, your storefront can be evaluated against WCAG 2.2 Level AA even if your platform marketing sounds accessibility-friendly.</p>
+  <div class="note">California accounts for <strong>40% of ADA web lawsuits</strong>. New York and Florida follow. That is why US ecommerce compliance content has to be state-aware, platform-aware, and built around litigation reality.</div>
+  <p>A US Wix store facing a demand letter may spend $10,000 to $40,000 in legal review and remediation before long-term hardening begins. Public US examples also show what can happen at scale: Fashion Nova paid <strong>$5.15 million USD</strong>, and smaller brands still face expensive settlement pressure in USD long before any large headline appears.</p>
+
+  <h2>Why US Wix stores get flagged</h2>
+  <ul><li>Drag-and-drop layouts can create inconsistent heading order, small targets, and decorative clutter around checkout paths.</li><li>Marketplace apps often inject unlabeled buttons, popups, and chat widgets.</li><li>Mobile-specific layout changes can hide focus states or obscure content for keyboard users.</li></ul>
+
+  <h2>What US plaintiff firms and testers usually document</h2>
+  <div class="card">
+    <ul>
+      <li>Missing alt text on product imagery and icons.</li>
+      <li>Unlabeled form fields in checkout, signup, and support flows.</li>
+      <li>Keyboard traps in filters, drawers, popups, and mobile menus.</li>
+      <li>Weak color contrast and invisible focus indicators.</li>
+      <li>Broken error messaging and inaccessible account recovery forms.</li>
+    </ul>
+  </div>
+
+  <h2>US remediation priorities for Wix</h2>
+  <ol><li>Audit live mobile and desktop views separately because Wix layouts diverge.</li><li>Normalize typography, color, and button hit areas in global settings.</li><li>Replace marketplace apps that repeatedly fail keyboard or labeling tests.</li><li>Retest animated interactions after each US campaign update.</li></ol>
+  <p>For US operators, the key is not only fixing defects. It is proving repeatable remediation across reusable templates so the same issue does not return after the next launch.</p>
+
+  <h2>What standard matters in the United States?</h2>
+  <p>In the US, <strong>WCAG 2.2 Level AA is the de facto standard for ADA compliance</strong>. Courts, demand letters, consultants, and settlements usually talk about barriers in product discovery, forms, keyboard flow, focus indicators, and alternative text. Those issues map directly to WCAG requirements.</p>
+
+  <h2>FAQ</h2>
+  <p><strong>Is Wix automatically ADA compliant for US stores?</strong><br>No. The platform helps only if the live storefront, apps, content, and custom code are accessible.</p>
+  <p><strong>What accessibility issues are common on US Wix stores?</strong><br>Small touch targets, app-driven modals, poor heading order, and weak focus visibility are common Wix defects.</p>
+  <p><strong>What should a US Wix store fix first?</strong><br>Start with product pages, cart, checkout-adjacent flows, account pages, popups, search, and filters because those produce both legal risk and direct revenue loss.</p>
+  <p><strong>Check if your US Wix store is compliant →</strong> <a href="https://altorlab.app">Free scan</a></p>
 </article>
-<footer class="footer"><a href="/compliance/">All platform guides</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab</a></footer>
+<footer class="footer"><a href="/compliance/">All platform guides</a> · <a href="/blog/">Blog</a> · <a href="/">AltorLab ADA Compliance — Serving US D2C brands</a></footer>
+
 </body>
 </html>
