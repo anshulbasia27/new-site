@@ -1,27 +1,28 @@
-import { motion } from 'motion/react'
-import { useState, type FormEvent } from 'react'
 import {
-  Shield,
   AlertTriangle,
-  Search,
-  FileText,
-  Wrench,
-  Check,
-  X,
   ArrowRight,
+  Check,
   ChevronDown,
   ChevronUp,
+  FileText,
   Scale,
-  TrendingUp,
+  Search,
+  Shield,
   ShoppingCart,
+  TrendingUp,
+  Wrench,
+  X,
 } from 'lucide-react'
+import { motion } from 'motion/react'
+import { useState } from 'react'
+import type { FormEvent } from 'react'
 import { FadeUp, ease } from '../components/FadeUp'
 import { SEOHead } from '../components/SEOHead'
 
 // ─── Hero ────────────────────────────────────────────────────────────
 function Hero() {
   return (
-    <section className="relative min-h-[95vh] flex items-center overflow-hidden pt-14">
+    <section className="relative min-h-[95vh] flex items-center overflow-hidden pt-24">
       {/* Glow effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-danger/[0.04] rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-20 right-20 w-[300px] h-[300px] bg-danger/[0.02] rounded-full blur-[80px] pointer-events-none" />
@@ -154,7 +155,7 @@ function Hero() {
                 { sev: 'MEDIUM', msg: '4 missing skip-nav links', color: 'text-yellow-500 bg-yellow-500/10' },
               ].map((item, i) => (
                 <motion.div
-                  key={i}
+                  key={item.msg}
                   initial={{ opacity: 0, x: -8 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.8 + i * 0.12, duration: 0.3 }}
@@ -190,6 +191,68 @@ function Hero() {
   )
 }
 
+function EmailUpdatesCapture() {
+  const [email, setEmail] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    if (!email) return
+
+    const href = `mailto:amelia@altorlab.app?subject=${encodeURIComponent('ADA Compliance Updates Signup')}&body=${encodeURIComponent(`Please sign me up for ADA compliance updates for US ecommerce.\n\nEmail: ${email}`)}`
+
+    window.location.href = href
+    setSubmitted(true)
+    setEmail('')
+  }
+
+  return (
+    <section className="border-y border-surface-border bg-surface-raised/40">
+      <div className="max-w-6xl mx-auto px-6 py-8 md:py-10">
+        <FadeUp>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 rounded-2xl border border-surface-border bg-surface/60 p-6 md:p-8">
+            <div className="max-w-2xl">
+              <p className="text-sm font-mono text-danger tracking-wider uppercase mb-3">Email updates</p>
+              <h2 className="text-2xl md:text-[2rem] font-bold tracking-[-0.02em] text-text-primary mb-2 text-balance">
+                Get ADA compliance updates for US ecommerce
+              </h2>
+              <p className="text-sm md:text-base text-text-secondary">
+                Practical notes on scans, remediation, and ADA risk shifts for US D2C teams.
+              </p>
+            </div>
+
+            <div className="w-full max-w-xl">
+              {submitted ? (
+                <div className="rounded-xl border border-green-dim/40 bg-green/[0.03] px-4 py-3 text-sm text-text-secondary">
+                  Your email app should open with the signup request.
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+                  <input
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email"
+                    className="flex-1 min-w-0 px-4 py-3 bg-surface border border-surface-border rounded-lg text-text-primary placeholder:text-text-muted/60 text-sm focus:outline-none focus:border-danger/50 focus:ring-1 focus:ring-danger/20 transition-colors"
+                  />
+                  <button
+                    type="submit"
+                    className="inline-flex items-center justify-center px-5 py-3 bg-danger hover:bg-red-700 text-white font-semibold text-sm rounded-lg transition-colors"
+                  >
+                    Get Updates
+                  </button>
+                </form>
+              )}
+              <p className="text-xs text-text-muted mt-2">Opens your email app with your address prefilled.</p>
+            </div>
+          </div>
+        </FadeUp>
+      </div>
+    </section>
+  )
+}
+
 // ─── Lawsuit Ticker ──────────────────────────────────────────────────
 const lawsuitHeadlines = [
   'Blue Apron sued for website accessibility violations',
@@ -213,12 +276,21 @@ function LawsuitTicker() {
         </div>
         <div className="overflow-hidden no-scrollbar flex-1">
           <div className="ticker-track animate-ticker">
-            {[...lawsuitHeadlines, ...lawsuitHeadlines].map((h, i) => (
+            {lawsuitHeadlines.map((headline) => (
               <span
-                key={i}
+                key={`primary-${headline}`}
                 className="shrink-0 px-6 py-3 text-xs text-text-secondary font-mono whitespace-nowrap"
               >
-                {h}
+                {headline}
+                <span className="text-text-muted mx-4">&bull;</span>
+              </span>
+            ))}
+            {lawsuitHeadlines.map((headline) => (
+              <span
+                key={`secondary-${headline}`}
+                className="shrink-0 px-6 py-3 text-xs text-text-secondary font-mono whitespace-nowrap"
+              >
+                {headline}
                 <span className="text-text-muted mx-4">&bull;</span>
               </span>
             ))}
@@ -243,7 +315,7 @@ function FearStats() {
       <div className="max-w-6xl mx-auto px-6 py-14 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x md:divide-surface-border">
           {stats.map((stat, i) => (
-            <FadeUp key={i} delay={i * 0.06}>
+            <FadeUp key={stat.label} delay={i * 0.06}>
               <div className="text-center md:px-6">
                 <div className="text-3xl md:text-4xl font-bold tracking-tight text-danger mb-1">{stat.value}</div>
                 <div className="text-sm text-text-primary font-medium mb-1">{stat.label}</div>
@@ -290,7 +362,7 @@ function WhyD2C() {
             desc: 'Small enough to settle, big enough to hurt. And 29% of defendants get sued again within 12 months. One-time fixes don\'t work — you need monitoring.',
           },
         ].map((item, i) => (
-          <FadeUp key={i} delay={i * 0.08}>
+          <FadeUp key={item.title} delay={i * 0.08}>
             <div className="p-6 md:p-8 border border-surface-border rounded-xl bg-surface-raised/50 hover:border-danger-dim/40 transition-colors h-full">
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-danger/10 text-danger mb-5">
                 {item.icon}
@@ -344,7 +416,7 @@ function HowItWorks() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {steps.map((step, i) => (
-          <FadeUp key={i} delay={i * 0.08}>
+          <FadeUp key={step.title} delay={i * 0.08}>
             <div className="group relative p-6 md:p-8 border border-surface-border rounded-xl bg-surface-raised/50 hover:border-danger-dim/40 transition-colors h-full">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-danger/10 text-danger">
@@ -392,8 +464,8 @@ function NotAnOverlay() {
                   'Courts require removal + real fixes',
                   'Blocks screen readers from critical functions',
                   'No protection from lawsuits',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-text-secondary">
                     <X className="w-4 h-4 text-danger shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -416,8 +488,8 @@ function NotAnOverlay() {
                   'Ongoing monitoring catches new violations',
                   'Meets WCAG 2.1 AA — the legal standard',
                   'Documented proof of compliance for legal defense',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-text-secondary">
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-text-secondary">
                     <Check className="w-4 h-4 text-green shrink-0 mt-0.5" />
                     {item}
                   </li>
@@ -515,7 +587,7 @@ function CaseStudies() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {caseStudies.map((cs, i) => (
-          <FadeUp key={i} delay={i * 0.06}>
+          <FadeUp key={`${cs.industry}-${cs.platform}`} delay={i * 0.06}>
             <div className="border border-surface-border rounded-xl bg-surface-raised/50 overflow-hidden h-full flex flex-col">
               <div className="flex items-center gap-2 px-4 py-3 border-b border-surface-border bg-surface/60">
                 <div className="flex gap-1.5">
@@ -545,8 +617,8 @@ function CaseStudies() {
                   showing top {cs.violations.length} of {cs.totalViolations} violations
                 </div>
                 <div className="divide-y divide-surface-border/40 flex-1">
-                  {(expanded === i ? cs.violations : cs.violations.slice(0, 3)).map((v, j) => (
-                    <div key={j} className="flex items-start gap-3 px-5 py-2.5 font-mono text-[11px]">
+                  {(expanded === i ? cs.violations : cs.violations.slice(0, 3)).map((v) => (
+                    <div key={`${v.sev}-${v.msg}`} className="flex items-start gap-3 px-5 py-2.5 font-mono text-[11px]">
                       <span
                         className={`shrink-0 mt-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold tracking-wider ${
                           v.sev === 'CRITICAL'
@@ -563,6 +635,7 @@ function CaseStudies() {
                   ))}
                   {cs.violations.length > 3 && expanded !== i && (
                     <button
+                      type="button"
                       onClick={() => setExpanded(i)}
                       aria-expanded={false}
                       className="w-full px-5 py-2 text-[11px] font-mono text-danger hover:text-red-400 transition-colors text-left"
@@ -633,8 +706,8 @@ function CostComparison() {
                   { label: 'Legal defense fees', cost: '$10,000 – $75,000' },
                   { label: 'Court-ordered remediation', cost: '$25,000 – $100,000' },
                   { label: 'Brand damage / lost customers', cost: 'Priceless' },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between text-sm">
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between text-sm">
                     <span className="text-text-secondary">{item.label}</span>
                     <span className="font-mono text-danger font-semibold">{item.cost}</span>
                   </div>
@@ -659,8 +732,8 @@ function CostComparison() {
                   { label: 'Prioritized risk report', cost: 'Included' },
                   { label: 'Complete remediation', cost: 'Included' },
                   { label: 'Ongoing monitoring', cost: 'Included' },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-between text-sm">
+                ].map((item) => (
+                  <div key={item.label} className="flex items-center justify-between text-sm">
                     <span className="text-text-secondary">{item.label}</span>
                     <span className="font-mono text-green font-semibold">{item.cost}</span>
                   </div>
@@ -753,7 +826,7 @@ function Pricing({ onSelectPlan }: { onSelectPlan: (plan: string) => void }) {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {plans.map((plan, i) => (
-          <FadeUp key={i} delay={i * 0.08}>
+          <FadeUp key={plan.name} delay={i * 0.08}>
             <div
               className={`relative p-6 md:p-8 rounded-xl h-full flex flex-col ${
                 plan.highlighted
@@ -774,17 +847,20 @@ function Pricing({ onSelectPlan }: { onSelectPlan: (plan: string) => void }) {
               <p className="text-sm text-text-secondary mb-6">{plan.desc}</p>
 
               <ul className="space-y-3 mb-8 flex-1">
-                {plan.features.map((f, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-text-secondary">
+                {plan.features.map((feature) => (
+                  <li key={feature} className="flex items-start gap-2 text-sm text-text-secondary">
                     <Check className="w-4 h-4 text-green shrink-0 mt-0.5" />
-                    {f}
+                    {feature}
                   </li>
                 ))}
               </ul>
 
-              <a
-                href="#contact"
-                onClick={() => onSelectPlan(plan.name)}
+              <button
+                type="button"
+                onClick={() => {
+                  onSelectPlan(plan.name)
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                }}
                 className={`w-full inline-flex items-center justify-center py-3 text-sm font-semibold rounded-lg transition-colors ${
                   plan.highlighted
                     ? 'bg-danger hover:bg-red-700 text-white'
@@ -792,7 +868,7 @@ function Pricing({ onSelectPlan }: { onSelectPlan: (plan: string) => void }) {
                 }`}
               >
                 {plan.cta}
-              </a>
+              </button>
             </div>
           </FadeUp>
         ))}
@@ -928,9 +1004,10 @@ function FAQ() {
 
       <div className="space-y-2">
         {faqs.map((faq, i) => (
-          <FadeUp key={i} delay={i * 0.04}>
+          <FadeUp key={faq.q} delay={i * 0.04}>
             <div className="border border-surface-border rounded-lg overflow-hidden">
               <button
+                type="button"
                 onClick={() => setOpen(open === i ? null : i)}
                 aria-expanded={open === i}
                 aria-controls={`faq-${i}`}
@@ -1003,8 +1080,8 @@ function ContactForm({ selectedPlan }: { selectedPlan: string }) {
                   'Violations prioritized by legal risk',
                   'Specific remediation recommendations',
                   'Report delivered within 24 hours',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-text-secondary">
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 text-sm text-text-secondary">
                     <Check className="w-4 h-4 text-green shrink-0" />
                     {item}
                   </div>
@@ -1168,6 +1245,7 @@ export default function Landing() {
       />
       <main>
         <Hero />
+        <EmailUpdatesCapture />
         <LawsuitTicker />
         <FearStats />
         <WhyD2C />

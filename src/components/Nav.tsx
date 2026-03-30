@@ -1,6 +1,6 @@
+import { Menu, Shield, X } from 'lucide-react'
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Shield, X, Menu } from 'lucide-react'
 
 export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -8,7 +8,7 @@ export function Nav() {
   const prefix = pathname === '/' ? '' : '/'
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-surface-border/60 bg-surface/80 backdrop-blur-xl">
+    <nav className="fixed top-10 left-0 right-0 z-50 border-b border-surface-border/60 bg-surface/80 backdrop-blur-xl">
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <Shield className="w-5 h-5 text-danger" />
@@ -38,6 +38,7 @@ export function Nav() {
             Free Audit
           </a>
           <button
+            type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-1.5 text-text-secondary hover:text-text-primary transition-colors"
             aria-label="Toggle menu"

@@ -20,6 +20,12 @@ export function Footer() {
               ADA/WCAG compliance scanning and remediation for D2C brands. Real
               fixes, not overlays.
             </p>
+            <p className="text-xs text-text-muted mt-3">
+              Questions? Email{' '}
+              <a href="mailto:amelia@altorlab.app" className="text-text-secondary hover:text-text-primary transition-colors">
+                amelia@altorlab.app
+              </a>
+            </p>
           </div>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 text-xs text-text-muted">
             <a href={`${prefix}#how`} className="hover:text-text-secondary transition-colors">
@@ -63,9 +69,10 @@ export function Footer() {
           <span className="text-xs text-text-muted">
             &copy; {new Date().getFullYear()} AltorLab. All rights reserved.
           </span>
-          <span className="text-xs text-text-muted">
-            WCAG 2.1 AA &middot; ADA Title III &middot; Section 508
-          </span>
+          <div className="flex flex-col md:items-end gap-1 text-xs text-text-muted">
+            <span>Serving US D2C brands</span>
+            <span>WCAG 2.1 AA &middot; ADA Title III &middot; Section 508</span>
+          </div>
         </div>
       </div>
     </footer>

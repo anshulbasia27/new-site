@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { FadeUp } from './FadeUp'
 import { GuideCTA } from './GuideCTA'
 
@@ -31,13 +31,15 @@ export function GuideLayout({ title, subtitle, readTime, toc, children }: GuideL
     )
 
     const headings = toc.map((item) => document.getElementById(item.id)).filter(Boolean) as HTMLElement[]
-    headings.forEach((el) => observer.observe(el))
+    headings.forEach((el) => {
+      observer.observe(el)
+    })
 
     return () => observer.disconnect()
   }, [toc])
 
   return (
-    <article className="pt-14">
+    <article className="pt-24">
       {/* Title banner */}
       <div className="border-b border-surface-border bg-surface-raised/30">
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24">
@@ -62,7 +64,7 @@ export function GuideLayout({ title, subtitle, readTime, toc, children }: GuideL
         <div className="flex gap-12 lg:gap-16">
           {/* Sticky TOC (desktop) */}
           <aside className="hidden lg:block w-56 shrink-0">
-            <div className="sticky top-20">
+            <div className="sticky top-32">
               <p className="text-xs font-mono text-text-muted uppercase tracking-wider mb-4">
                 On this page
               </p>
